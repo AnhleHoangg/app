@@ -4,7 +4,7 @@ import {
   faInstagram,
   faPinterestP,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartArrowDown, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   createStyles,
@@ -13,14 +13,13 @@ import {
   Header,
   Container,
   Group,
-  Button,
   Burger,
   rem,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown } from "@tabler/icons-react";
 
-const HEADER_HEIGHT = rem(60);
+const HEADER_HEIGHT = rem(30);
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -122,37 +121,73 @@ export function HeaderAction({ links }: HeaderActionProps) {
   });
 
   return (
-    <Header height={HEADER_HEIGHT} sx={{ borderBottom: 0 }} mb={120}>
-      <Container className={classes.inner} fluid>
-        <Group>
-          <Burger
-            opened={opened}
-            onClick={toggle}
-            className={classes.burger}
-            size="sm"
-          />
-          <div className="flex">
-            <div className="">
-              <div>
-                <FontAwesomeIcon icon={faFacebookF} />
-                <FontAwesomeIcon icon={faTwitter} />
-                <FontAwesomeIcon icon={faInstagram} />
-                <FontAwesomeIcon icon={faPinterestP} />
-              </div>
-              <div>Logo</div>
-              <div>
-                <FontAwesomeIcon icon={faCartShopping} />
-              </div>
-            </div>
+    <div className="">
+      <div className="h-14 w-full my-5 ">
+        <div className="flex justify-between flex-row items-center ">
+          <div className=" text-m text-gray-600 ">
+            <FontAwesomeIcon
+              className="px-2 cursor-pointer"
+              icon={faFacebookF}
+            />
+            <FontAwesomeIcon className="px-2 cursor-pointer" icon={faTwitter} />
+            <FontAwesomeIcon
+              className="px-2 cursor-pointer"
+              icon={faInstagram}
+            />
+            <FontAwesomeIcon
+              className="px-2 cursor-pointer"
+              icon={faPinterestP}
+            />
           </div>
-        </Group>
-        <Group spacing={5} className={classes.links}>
-          {items}
-        </Group>
-        <Button radius="xl" h={30}>
-          Buy Now
-        </Button>
-      </Container>
-    </Header>
+          <div>
+            <img
+              src="https://nouthemes.net/html/zorka/assets/images/logo.png"
+              alt="/logo"
+            ></img>
+          </div>
+          <div className=" text-3xl text-gray-600 cursor-pointer">
+            <FontAwesomeIcon icon={faCartArrowDown} />
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-center m-0">
+        <Header
+          className="m-0"
+          height={HEADER_HEIGHT}
+          sx={{ borderBottom: 0 }}
+          mb={120}
+        >
+          <Container className={`${classes.inner} relative`} fluid>
+            <Group>
+              <Burger
+                opened={opened}
+                onClick={toggle}
+                className={classes.burger}
+                size="sm"
+              />
+            </Group>
+            <Group spacing={5} className={classes.links}>
+              {items}
+            </Group>
+            <div className="group absolute left-[358px]">
+              <form className="bg-slate-300 rounded-3xl  w-10 flex  items-center hover:w-60 transition-all">
+                <button className=" rounded-full h-10 ">
+                  <FontAwesomeIcon
+                    className="mx-3 text-slate-100  "
+                    icon={faSearch}
+                  />
+                </button>
+                <input
+                  className="bg-slate-300 border-none rounded-3xl p-1 outline-none w-full hidden group-hover:block"
+                  type="text"
+                  placeholder="Search ..."
+                  required
+                ></input>
+              </form>
+            </div>
+          </Container>
+        </Header>
+      </div>
+    </div>
   );
 }

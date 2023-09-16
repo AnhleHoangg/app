@@ -1,33 +1,20 @@
-import React from "react";
-import { HeaderAction } from "./components/header/Header";
+import { Routes, Route } from "react-router-dom";
 
+import DefaultLayout from "./layout/defaultlayout/DefaultLayout";
+import { Home } from "./page/home/Home";
 function App() {
   return (
-    <div className="">
-      <HeaderAction
-        links={[
-          {
-            label: "Home",
-            link: "/",
-          },
-          {
-            label: "Shop",
-            link: "/",
-          },
-          {
-            label: "Blog",
-            link: "/",
-          },
-          {
-            label: "Pages",
-            link: "/",
-          },
-          {
-            label: "Contact",
-            link: "/",
-          },
-        ]}
-      ></HeaderAction>
+    <div className="w-full flex justify-center">
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <DefaultLayout>
+              <Home />
+            </DefaultLayout>
+          }
+        />
+      </Routes>
     </div>
   );
 }
