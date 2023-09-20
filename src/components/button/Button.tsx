@@ -31,7 +31,7 @@ const buttonHome = [
 
 export const Button = () => {
   return (
-    <div className="flex items-center gap-2 w-full justify-center">
+    <div className="flex items-center gap-2 w-full justify-center cursor-pointer ">
       {buttonHome.map((item) => (
         <div
           className={`${item.color} flex items-center w-[300px] h-[70px]`}

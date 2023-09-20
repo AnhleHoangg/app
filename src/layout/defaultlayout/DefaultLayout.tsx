@@ -1,12 +1,14 @@
+import { link } from "fs";
 import { HeaderAction } from "../header/Header";
+import { Footer } from "../footer/Footer";
 
 type layoutProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 function DefaultLayout({ children }: layoutProps) {
   return (
-    <div className="w-3/4 flex flex-col">
+    <div className=" flex flex-col items-center  ">
       <HeaderAction
         links={[
           {
@@ -32,6 +34,9 @@ function DefaultLayout({ children }: layoutProps) {
         ]}
       ></HeaderAction>
       <div className="w-full"> {children} </div>
+      <div>
+        <Footer></Footer>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { createStyles, getStylesRef } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import { Button } from "../../components/button/Button";
+import { ProductItem } from "../../components/cartItem/ProductItem";
 
 const useStyles = createStyles(() => ({
   controls: {
@@ -53,13 +54,7 @@ export function Home() {
           </Carousel.Slide>
         </Carousel>
       </div>
-      <div>
-        <Button></Button>
-      </div>
-      <div>
-        <h3>TRENDY CLOTHING</h3>
-        <h5>Trending</h5>
-      </div>
+      <div></div>
     </>
   );
 }

@@ -121,7 +121,7 @@ export function HeaderAction({ links }: HeaderActionProps) {
   });
 
   return (
-    <div className="">
+    <div className="w-[1200px]">
       <div className="h-14 w-full my-5 ">
         <div className="flex justify-between flex-row items-center ">
           <div className=" text-m text-gray-600 ">
