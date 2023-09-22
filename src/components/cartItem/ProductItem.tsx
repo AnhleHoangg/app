@@ -26,14 +26,22 @@ interface productItem {}
 export const ProductItem: React.FC<productItem> = (props) => {
   return (
     <div className="  w-[270px] text-sm mb-5 px-4">
-      <div className=" m-1">
+      <div className=" m-1 relative">
         <a href="">
           <img
-            className="w-[270px] h-[360px] object-contain"
+            className="w-[270px] h-[360px] object-contain "
             src="https://marketplace.canva.com/EAFO_G5Kocw/1/0/450w/canva-m%C3%A0u-be-%C4%91%E1%BB%93ng-h%E1%BB%93-c%C3%A1t-h%C3%ACnh-n%E1%BB%81n-nh%E1%BA%AFc-nh%E1%BB%9F-c%E1%BA%A5t-%C4%91i%E1%BB%87n-tho%E1%BA%A1i-e89075KBGQE.jpg"
             alt="img"
           />
         </a>
+        {/* <div className=" absolute top-0 right-0 bottom-0 object-contain   ">
+          <div>
+            <img
+              alt="img"
+              src="https://nouthemes.net/html/zorka/assets/images/product-img-4-thumb.jpg"
+            ></img>
+          </div>
+        </div> */}
       </div>
       <div className=" my-4 flex flex-col items-center">
         <a className="font-medium " href="">
@@ -44,10 +52,10 @@ export const ProductItem: React.FC<productItem> = (props) => {
         </p>
         <div className=" h-[35px] box-border w-full flex justify-between c">
           <button
-            className="flex items-center border-2 p-3  border-[#c2c2c2]  rounded-3xl ct-hoverDefault "
+            className="flex items-center  border-2 p-3  border-[#c2c2c2]  rounded-3xl ct-hoverDefault "
             type="button"
           >
-            <span>Add to Cart</span>
+            <span className="font-bold">Add to Cart</span>
           </button>
           <div className="  flex gap-1 items-center justify-center ">
             <div className="group">
