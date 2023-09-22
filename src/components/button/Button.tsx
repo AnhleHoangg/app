@@ -1,37 +1,10 @@
-import {
-  faCartShopping,
-  faGift,
-  faDiamond,
-} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const buttonHome = [
-  {
-    id: 1,
-    icon: faCartShopping,
-    title: "FREE SHIPPING WORLDWIDE",
-    color: "bg-[#ca7379]",
-    colorIcon: "bg-[#b5676d]",
-  },
-  {
-    id: 2,
-    icon: faGift,
-    title: "GIVEAWAY EVERYWEEK",
-    color: "bg-[#c1ac91]",
-    colorIcon: "bg-[#ad9a82]",
-  },
-  {
-    id: 3,
-    icon: faDiamond,
-    title: "SALE UP TO 70% OFF ON TUESDAY",
-    color: "bg-[#8090a1]",
-    colorIcon: "bg-[#738191]",
-  },
-];
+import { buttonHome } from "../../data/mock-buttonsale";
 
 export const Button = () => {
   return (
-    <div className=" flex items-center gap-10 w-full justify-center cursor-pointer m-[20px] ">
+    <div className=" flex items-center gap-10 w-full justify-center cursor-pointer mt-[35px] ">
       {buttonHome.map((item) => (
         <div
           className={`${item.color} flex items-center w-[300px] h-[60px] `}

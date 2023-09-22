@@ -14,7 +14,7 @@ export function Home() {
         <div className="">
           <Button></Button>
         </div>
-        <div className="flex flex-col justify-center mt-20 items-center uppercase -tracking-tight ">
+        <div className="flex flex-col justify-center mt-[60px] items-center uppercase -tracking-tight ">
           <h3 className="mb-[0px] border-none">Trendy clothing</h3>
           <h5 className="mb-[30px] text-[13px] normal-case ">Trending</h5>
           <div className=" box-border w-[1200px] h-fit">
