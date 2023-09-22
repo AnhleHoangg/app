@@ -4,7 +4,7 @@ const Login = () => {
   return (
     <div className="text-xs grid gap-2 grid-cols-2 w-full h-fit py-[70px] tracking-widest uppercase">
       <div className="w-[570px] h-fit box-border border-solid border-4 border-inherit  border-opacity-5 px-[15px] m-auto ">
-        <div className="flex flex-col p-[50px] items-center box-border  bg-web-100 ">
+        <form className="flex flex-col p-[50px] items-center box-border  bg-web-100 ">
           <p className=" mb-[50px] text-3xl">Login</p>
           <label className="mb-[10px]">Username or Number *</label>
           <input
@@ -16,7 +16,10 @@ const Login = () => {
             className="w-[460px] h-[42px] border-solid border-2 rounded-3xl	px-[20px] mb-[25px]"
             type="password"
           ></input>
-          <button className="uppercase text-web-100 py-[10px] px-[30px]  bg-[#cc797f] rounded-3xl">
+          <button
+            type="submit"
+            className="uppercase text-web-100 py-[10px] px-[30px]  bg-[#cc797f] rounded-3xl"
+          >
             Login
           </button>
           <label className="mt-[20px] mb-[10px] flex justify-center items-center">
@@ -27,7 +30,7 @@ const Login = () => {
           <a className="text-[#cc797f]" href="#">
             Lost Your Password?
           </a>
-        </div>
+        </form>
       </div>
       <div className="flex justify-center">
         <div className="flex flex-col items-center">

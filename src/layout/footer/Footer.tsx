@@ -11,7 +11,7 @@ import { iconPay } from "../../data/mock-data";
 export const Footer = () => {
   return (
     <div>
-      <div className=" pt-[70px] pb-[30px] w-screen bg-web-100 flex justify-around uppercase text-xs tracking-widest	">
+      <div className=" pt-[70px] pb-[30px] mt-[500px] w-screen bg-web-100 flex justify-around uppercase text-xs tracking-widest">
         <div className=" flex-[1/4] px-[15px]">
           <h3>Location</h3>
           <div className="pt-2 mb-[30px] font-semibold">

@@ -7,8 +7,8 @@ interface propsButton {
 export const ButtonDefault: React.FC<propsButton> = ({ title }) => {
   return (
     <div className="group">
-      <div className="box-border outline rounded-xl hover: bg-red-400 ">
-        <button className="py-1 px-2 group-hover: block">{title}</button>
+      <div className="uppercase py-[10px] px-[30px] rounded-3xl">
+        <button className="py-1 px-2 ">{title}</button>
       </div>
     </div>
   );

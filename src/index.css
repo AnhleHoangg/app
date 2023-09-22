@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 
+.ct-hoverDefault {
+         @apply hover:bg-[#e67880] hover:text-[white] hover:border-[white] hover:transition-all hover:delay-150 hover:ease-in-out  ;
+}
+
 
 @layer base {
 
@@ -21,4 +25,3 @@
         font-family: 'Open Sans', sans-serif;
     }
 }
-
