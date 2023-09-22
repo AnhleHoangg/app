@@ -121,9 +121,9 @@ export function HeaderAction({ links }: HeaderActionProps) {
   });
 
   return (
-    <div className="w-[1200px]">
+    <div className="w-full  uppercase bg-web-100 ">
       <div className="h-14 w-full my-5 ">
-        <div className="flex justify-between flex-row items-center ">
+        <div className="flex justify-around flex-row items-center ">
           <div className=" text-m text-gray-600 ">
             <FontAwesomeIcon
               className="px-2 cursor-pointer"
@@ -150,14 +150,17 @@ export function HeaderAction({ links }: HeaderActionProps) {
           </div>
         </div>
       </div>
-      <div className="flex justify-center m-0">
+      <div className=" group flex justify-center m-0">
         <Header
-          className="m-0"
+          className="m-0 bg-web-100 mb-[7px] hover:text-[#cc797f]"
           height={HEADER_HEIGHT}
           sx={{ borderBottom: 0 }}
           mb={120}
         >
-          <Container className={`${classes.inner} relative`} fluid>
+          <Container
+            className={`${classes.inner} relative hover:text-[#cc797f]`}
+            fluid
+          >
             <Group>
               <Burger
                 opened={opened}
@@ -169,8 +172,8 @@ export function HeaderAction({ links }: HeaderActionProps) {
             <Group spacing={5} className={classes.links}>
               {items}
             </Group>
-            <div className="group absolute left-[358px]">
-              <form className="bg-slate-300 rounded-3xl  w-10 flex  items-center hover:w-60 transition-all">
+            <div className="group absolute left-[370px]">
+              <form className=" mb-[2px]  w-10 flex  items-center hover:w-60 transition-all">
                 <button className=" rounded-full h-10 ">
                   <FontAwesomeIcon
                     className="mx-3 text-slate-100  "
@@ -178,7 +181,7 @@ export function HeaderAction({ links }: HeaderActionProps) {
                   />
                 </button>
                 <input
-                  className="bg-slate-300 border-none rounded-3xl p-1 outline-none w-full hidden group-hover:block"
+                  className=" border-none rounded-3xl p-2 outline-none w-full hidden group-hover:block"
                   type="text"
                   placeholder="Search ..."
                   required
