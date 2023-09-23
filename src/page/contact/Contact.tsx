@@ -3,7 +3,7 @@ function Contact() {
     <div>
       <div className="p-[10px]">
         <iframe
-          className="w-full h-[500px]"
+          className="w-full h-[550px]"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.89940621069618!2d106.62733181350781!3d10.857874608648986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b12a68a5f37%3A0xa6a1162f251bd3fa!2zMTEzIMSQw7RuZyBC4bqvYywgVMOibiBIxrBuZyBUaHXhuq1uLCBRdeG6rW4gMTIsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCA3MTUwNiwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1695487076965!5m2!1svi!2s"
         ></iframe>
       </div>
