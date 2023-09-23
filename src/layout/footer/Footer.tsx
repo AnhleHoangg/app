@@ -11,7 +11,7 @@ import { iconPay } from "../../data/mock-data";
 export const Footer = () => {
   return (
     <div>
-      <div className=" pt-[70px] pb-[30px] mt-[500px] w-screen bg-web-100 flex justify-around uppercase text-xs tracking-widest">
+      <div className=" pt-[70px] pb-[30px] w-screen bg-web-100 flex justify-around uppercase text-xs tracking-widest">
         <div className=" flex-[1/4] px-[15px]">
           <h3>Location</h3>
           <div className="pt-2 mb-[30px] font-semibold">
@@ -34,25 +34,25 @@ export const Footer = () => {
             </a>
           </p>
           <div className="flex justify-around mt-[20px] text-base ">
-            <a>
+            <a href="/">
               <FontAwesomeIcon
                 className="hover:text-[#cc797f]"
                 icon={faFacebookF}
               />
             </a>
-            <a>
+            <a href="/">
               <FontAwesomeIcon
                 className="hover:text-[#cc797f]"
                 icon={faTwitter}
               />
             </a>
-            <a>
+            <a href="/">
               <FontAwesomeIcon
                 className="hover:text-[#cc797f]"
                 icon={faInstagram}
               />
             </a>
-            <a>
+            <a href="/">
               <FontAwesomeIcon
                 className="hover:text-[#cc797f]"
                 icon={faPinterestP}
@@ -140,7 +140,7 @@ export const Footer = () => {
         <ul className="flex mt-[10px] mb-[10px]  ">
           {iconPay.map((item) => (
             <li className=" px-2 cursor-pointer ">
-              <img src={item.thumNail}></img>
+              <img src={item.thumNail} alt="Lehoanganh"></img>
             </li>
           ))}
         </ul>

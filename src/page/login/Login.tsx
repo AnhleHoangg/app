@@ -27,7 +27,7 @@ const Login = () => {
             <div className="ml-2"></div>
             Remember Me?
           </label>
-          <a className="text-[#cc797f]" href="#">
+          <a className="text-[#cc797f]" href="/">
             Lost Your Password?
           </a>
         </form>

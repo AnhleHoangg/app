@@ -9,8 +9,8 @@
          @apply hover:bg-[#e67880] hover:text-[white] hover:border-[white] hover:transition-all hover:delay-150 hover:ease-in-out  ;
 }
 
-.ct-hoverProduct {
-
+.ct-buttonCirle {
+    @apply w-[35px] h-[35px] border-2 border-[#c2c2c2] p-1 rounded-full flex justify-center items-center ct-hoverDefault ml-[5px];
 }
 
 

@@ -140,10 +140,13 @@ export function HeaderAction({ links }: HeaderActionProps) {
             />
           </div>
           <div>
-            <img
-              src="https://nouthemes.net/html/zorka/assets/images/logo.png"
-              alt="/logo"
-            ></img>
+            <a href="/">
+              <img
+                className="cursor-pointer"
+                src="https://nouthemes.net/html/zorka/assets/images/logo.png"
+                alt="/logo"
+              ></img>
+            </a>
           </div>
           <div className=" text-3xl text-gray-600 cursor-pointer">
             <FontAwesomeIcon icon={faCartArrowDown} />

@@ -3,10 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
-import { ProductItem } from "../cartItem/ProductItem";
-import { listproduct } from "../../data/mock-listproduct";
+import { logo } from "../../data/mock-logo";
 
-export const SlideShow: React.FC = () => {
+export const SlideShowLogo: React.FC = () => {
   return (
     <div className="py-[50px] w-[1200px]  cursor-pointer">
       <Swiper
@@ -16,15 +15,16 @@ export const SlideShow: React.FC = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
-        watchOverflow={true}
+        navigation={false}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        {listproduct.map((item) => (
-          <div>
+        {logo.map((item) => (
+          <div className="w-[1100px] px-[50px] pb-[30px]">
             <SwiperSlide>
-              <ProductItem items={item} />
+              <div>
+                <img src={item.src} alt="Lehoanganh"></img>
+              </div>
             </SwiperSlide>
           </div>
         ))}
