@@ -7,7 +7,17 @@ module.exports = {
         100: "#fafafa",
       },
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        changeDir: {
+          "0%": { transform: "translateX(0vw)" },
+          "100%": { transform: "translateX(-1200px)" },
+        },
+      },
+      animation: {
+        changeDir: "changeDir 5s ease-in-out infinite",
+      },
+    },
   },
   plugins: [],
 };

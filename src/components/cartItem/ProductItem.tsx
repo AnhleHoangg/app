@@ -7,7 +7,7 @@ interface productItem {
     title: string;
     thumbnail: string;
     price: number;
-    sale: number;
+    sale?: number;
   };
 }
 

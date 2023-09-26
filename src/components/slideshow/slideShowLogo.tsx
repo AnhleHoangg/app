@@ -20,9 +20,9 @@ export const SlideShowLogo: React.FC = () => {
         className="mySwiper"
       >
         {logo.map((item) => (
-          <div className="w-[1100px] px-[50px] pb-[30px]">
+          <div className="w-[1200px] px-[50px] pb-[30px]">
             <SwiperSlide>
-              <div>
+              <div className="flex justify-center">
                 <img src={item.src} alt="Lehoanganh"></img>
               </div>
             </SwiperSlide>

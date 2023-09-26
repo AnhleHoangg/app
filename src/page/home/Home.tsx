@@ -8,11 +8,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { SlideShow } from "../../components/slideshow/slideShow";
-import { Button } from "../../components/button/Button";
+import { Button } from "../../components/button/ButtonSale";
 import { blockItem } from "../../data/mock-blockitem";
 import { listBlog } from "../../data/mock-listblog";
 import { SlideShowLogo } from "../../components/slideshow/slideShowLogo";
 import { listBanner } from "../../data/mock-listbanner";
+import { TrendingProduct } from "../../components/trendingproduct/TrendingProduct";
 
 export function Home() {
   return (
@@ -29,22 +30,9 @@ export function Home() {
         <div className="flex flex-col justify-center mt-[60px] items-center uppercase tracking-widest ">
           <h3 className="mb-[0px] border-none">Trendy clothing</h3>
           <h5 className="mb-[30px] text-[13px] normal-case ">Trending</h5>
-          <div className=" box-border w-[1200px] h-fit">
-            <div className="w-full text-center mb-[20px]">
-              <div className="pb-[10px] mb-[5px] ">
-                <span className=" mx-[20px] hover:text-[#cc797f] cursor-pointer">
-                  FEATURES
-                </span>
-              </div>
-            </div>
-            <div className="flex justify-between">
-              {/* <ProductItem />
-              <ProductItem />
-              <ProductItem />
-              <ProductItem /> */}
-            </div>
-          </div>
-          <div className=" w-[1200px] flex justify-between -tracking-tighter mt-[40px] mb-[10px]">
+          <TrendingProduct />
+
+          <div className=" w-[1200px] flex justify-between -tracking-tighter mt-[40px] mb-[10px] ">
             <div className="box-border w-[570px] h-[220px] bg-[url('https://nouthemes.net/html/zorka/assets/images/home-bg-1.jpg')] bg-center bg-cover">
               <a className=" " href="/">
                 <h3 className="border-none w-full h-full flex justify-center items-center font-bold text-[30px] text-[white]">

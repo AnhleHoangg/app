@@ -7,17 +7,15 @@ function App() {
   return (
     <div className="flex justify-center ">
       <DefaultLayout>
-        <div className="">
+        <Routes>
           {publicRoutes.map((route) => (
-            <Routes>
-              <Route
-                path={route.path}
-                key={route.path}
-                Component={route.component}
-              ></Route>
-            </Routes>
+            <Route
+              path={route.path}
+              key={route.path}
+              Component={route.component}
+            />
           ))}
-        </div>
+        </Routes>
       </DefaultLayout>
     </div>
   );

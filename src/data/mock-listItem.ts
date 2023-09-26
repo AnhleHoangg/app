@@ -1,106 +1,106 @@
-export const listItem =[
+export const listItem = [
     {
-        id: 1,
+        id: 0,
         title: "Features",
-        item: [{
-            first: {
-                name: "HANDMADE FLARED JACKET",
+        item: [
+           {
+                title: "HANDMADE FLARED JACKET",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-1.jpg",
                 price: 189.99,
             },
-            second: {
-                name: "COAT WITH WOOL WRAPAROUND COLLAR",
+            {
+                title: "COAT WITH WOOL WRAPAROUND",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-2.jpg",
                 price: 189.99,
             },
-            thirtly: {
-                name: "UTILITY JACKET",
+            {
+                title: "UTILITY JACKET",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-3.jpg",
                 price: 189.99,
             },
-            fourthly: {
-                name: "ANIMAL PRINT COAT",
+            {
+                title: "ANIMAL PRINT COAT",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-4.jpg",
                 price: 189.99,
             },
-        },],
+        ],
+    },
+    {
+        id: 1,
+        title: "Men Style",
+        item: [
+            {
+                title: "HANDMADE FLARED JACKET",
+                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-1.jpg",
+                price: 189.99,
+            },
+            {
+                title: "COAT WITH WOOL WRAPAROUND",
+                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-2.jpg",
+                price: 189.99,
+            },
+            {
+                title: "UTILITY JACKET",
+                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-3.jpg",
+                price: 189.99,
+            },
+            {
+                title: "ANIMAL PRINT COAT",
+                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-4.jpg",
+                price: 189.99,
+            },
+        ],
     },
     {
         id: 2,
-        title: "Men Style",
-        item: [{
-            first: {
-                name: "HANDMADE FLARED JACKET",
-                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-1.jpg",
+        title: "Women Style",
+        item: [
+            {
+                title: "HANDMADE FLARED JACKET",
+                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-1",
                 price: 189.99,
             },
-            second: {
-                name: "COAT WITH WOOL WRAPAROUND COLLAR",
+            {
+                title: "COAT WITH WOOL WRAPAROUND",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-2.jpg",
                 price: 189.99,
             },
-            thirtly: {
-                name: "UTILITY JACKET",
+            {
+                title: "UTILITY JACKET",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-3.jpg",
                 price: 189.99,
             },
-            fourthly: {
-                name: "ANIMAL PRINT COAT",
+            {
+                title: "ANIMAL PRINT COAT",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-4.jpg",
                 price: 189.99,
             },
-        },],
+        ],
     },
     {
         id: 3,
-        title: "Women Style",
-        item: [{
-            first: {
-                name: "HANDMADE FLARED JACKET",
-                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-1.jpg",
-                price: 189.99,
-            },
-            second: {
-                name: "COAT WITH WOOL WRAPAROUND COLLAR",
-                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-2.jpg",
-                price: 189.99,
-            },
-            thirtly: {
-                name: "UTILITY JACKET",
-                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-3.jpg",
-                price: 189.99,
-            },
-            fourthly: {
-                name: "ANIMAL PRINT COAT",
-                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-4.jpg",
-                price: 189.99,
-            },
-        },],
-    },
-    {
-        id: 4,
         title: "Kid Style",
-        item:[{
-            first: {
-                name: "HANDMADE FLARED JACKET",
+        item:[
+            {
+                title: "HANDMADE FLARED JACKET",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-1.jpg",
                 price: 189.99,
             },
-            second: {
-                name: "COAT WITH WOOL WRAPAROUND COLLAR",
+            {
+                title: "COAT WITH WOOL WRAPAROUND",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-2.jpg",
                 price: 189.99,
             },
-            thirtly: {
-                name: "UTILITY JACKET",
+            {
+                title: "UTILITY JACKET",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-3.jpg",
                 price: 189.99,
             },
-            fourthly: {
-                name: "ANIMAL PRINT COAT",
+            {
+                title: "ANIMAL PRINT COAT",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-4.jpg",
                 price: 189.99,
             },
-        },],
+        ],
     },
 ]
