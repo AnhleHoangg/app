@@ -9,25 +9,27 @@ export const BlogPost = () => {
         <h3 className="mb-[25px] border-none text-[36px]">
           <a href="single-post.html">Zorka Men Spring/Summer Vacation</a>
         </h3>
-        <div className="box-border w-fit h-[40px] border p-3 mb-[20px] text-[11px] rounded-3xl border-[#8d8d8d] text-[#8d8d8d]">
-          <span className="mr-[30px]">
-            <a href="/">
-              <FontAwesomeIcon className="mr-[5px]" icon={faUser} />
-              <i className="font-semibold">ADMIN</i>
-            </a>
-          </span>
-          <span className="mr-[30px]">
-            <a href="/">
-              <FontAwesomeIcon className="mr-[5px]" icon={faClock} />
-              <i className="font-semibold"> JANUARY 15, 2015 </i>
-            </a>
-          </span>
-          <span className="mr-[30px]">
-            <a href="/">
-              <FontAwesomeIcon className="mr-[5px]" icon={faComment} />
-              <i className="font-semibold"> 10 COMMENTS</i>
-            </a>
-          </span>
+        <div className="box-border  w-fit h-[40px] border p-3 mb-[20px] text-[11px] rounded-3xl border-[#8d8d8d] text-[#8d8d8d]">
+          <div className="w-[350px] flex justify-center">
+            <span className="m-auto">
+              <a href="/">
+                <FontAwesomeIcon className="mr-[5px]" icon={faUser} />
+                <i className="font-semibold">ADMIN</i>
+              </a>
+            </span>
+            <span className="m-auto">
+              <a href="/">
+                <FontAwesomeIcon className="mr-[5px]" icon={faClock} />
+                <i className="font-semibold"> JANUARY 15, 2015 </i>
+              </a>
+            </span>
+            <span className="m-auto">
+              <a href="/">
+                <FontAwesomeIcon className="mr-[5px]" icon={faComment} />
+                <i className="font-semibold"> 10 COMMENTS</i>
+              </a>
+            </span>
+          </div>
         </div>
         <div className="my-[30px]">
           <img
