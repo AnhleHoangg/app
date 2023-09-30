@@ -7,7 +7,8 @@ import {
 import { faCartArrowDown, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { createStyles, Header, Container, Group, rem } from "@mantine/core";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import config from "../../config";
 
 const HEADER_HEIGHT = rem(30);
 
@@ -50,9 +51,13 @@ export function HeaderAction({ links }: HeaderActionProps) {
   const { classes } = useStyles();
   const items = links.map((link) => {
     return (
-      <Link key={link.label} to={link.link} className={classes.link}>
+      <NavLink
+        key={link.label}
+        to={link.link}
+        className={({ isActive }) => (isActive ? "active" : "")}
+      >
         {link.label}
-      </Link>
+      </NavLink>
     );
   });
 
@@ -84,8 +89,13 @@ export function HeaderAction({ links }: HeaderActionProps) {
               ></img>
             </Link>
           </div>
-          <div className=" text-3xl text-gray-600 cursor-pointer">
-            <FontAwesomeIcon icon={faCartArrowDown} />
+          <div className=" w-[116px] text-center flex justify-center text-3xl text-gray-600 cursor-pointer relative">
+            <Link className="flex" to={config.Routes.shoppingcart}>
+              <FontAwesomeIcon className="z-0" icon={faCartArrowDown} />
+              <div className=" absolute top-[-10px] right-[28px] bg-[#cc797f] rounded-full text-[10px] text-[white] px-2 font-bold h-[21px] flex items-center ">
+                2
+              </div>
+            </Link>
           </div>
         </div>
       </div>

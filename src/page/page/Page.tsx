@@ -12,29 +12,29 @@ import {
 import { faComment, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Pagination } from "@mantine/core";
 
-const listSocial = [
+export const listSocial = [
   {
-    link: "",
+    link: "https://www.facebook.com/",
     icon: faFacebook,
   },
   {
-    link: "",
+    link: "https://twitter.com/",
     icon: faTwitter,
   },
   {
-    link: "",
+    link: "https://www.instagram.com/",
     icon: faInstagram,
   },
   {
-    link: "",
+    link: "https://www.youtube.com/",
     icon: faYoutube,
   },
   {
-    link: "",
+    link: "https://www.linkedin.com/",
     icon: faLinkedin,
   },
   {
-    link: "",
+    link: "https://www.behance.net/",
     icon: faBehance,
   },
 ];
@@ -75,7 +75,7 @@ export const Page: React.FC = () => {
           <BlogPost />
           <BlogPost />
           <div className="flex justify-center">
-            <Pagination total={9} color="pink" radius="9999px" size="lg" />
+            <Pagination total={9} color="gray" radius="9999px" size="lg" />
           </div>
         </div>
 
@@ -87,7 +87,7 @@ export const Page: React.FC = () => {
                 <li className=" w-[40px] h-[40px] inline-block p-[8px] item-center mr-[5px] border rounded-full text-[#8d8d8d] ct-hoverDefault">
                   <a
                     className="flex justify-center items-center"
-                    href="blog.html"
+                    href={item.link}
                   >
                     <FontAwesomeIcon
                       className="flex justify-center items-center text-[22px]"

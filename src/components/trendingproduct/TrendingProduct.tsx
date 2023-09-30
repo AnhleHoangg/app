@@ -16,9 +16,8 @@ export const TrendingProduct: React.FC = () => {
               {listItem.map((item) => {
                 return (
                   <span
-                    id="titleHotTrend"
                     key={item.id}
-                    className="mx-[20px] hover:text-[#cc797f] cursor-pointer"
+                    className="text-[#cc797f] mx-[20px] hover:text-[#cc797f] cursor-pointer"
                     onClick={() => handleId(item.id)}
                   >
                     {item.title}

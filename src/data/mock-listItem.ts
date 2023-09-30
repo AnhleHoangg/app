@@ -31,22 +31,22 @@ export const listItem = [
         item: [
             {
                 title: "HANDMADE FLARED JACKET",
-                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-1.jpg",
+                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-10.jpg",
                 price: 189.99,
             },
             {
                 title: "COAT WITH WOOL WRAPAROUND",
-                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-2.jpg",
+                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-11.jpg",
                 price: 189.99,
             },
             {
                 title: "UTILITY JACKET",
-                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-3.jpg",
+                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-9.jpg",
                 price: 189.99,
             },
             {
                 title: "ANIMAL PRINT COAT",
-                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-4.jpg",
+                thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-8.jpg",
                 price: 189.99,
             },
         ],

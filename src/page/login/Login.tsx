@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -27,9 +28,9 @@ const Login = () => {
             <div className="ml-2"></div>
             Remember Me?
           </label>
-          <a className="text-[#cc797f]" href="/">
+          <NavLink className="text-[#cc797f]" to="/">
             Lost Your Password?
-          </a>
+          </NavLink>
         </form>
       </div>
       <div className="flex justify-center">

@@ -41,7 +41,7 @@ export const Shop: React.FC = () => {
             ))}
           </div>
           <div className="w-full flex justify-center mb-3 mt-[35px]">
-            <Pagination total={9} color="pink" radius="9999px" size="lg" />
+            <Pagination total={9} color="gray" radius="9999px" size="lg" />
           </div>
         </div>
       </div>

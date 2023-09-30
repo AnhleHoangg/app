@@ -1,6 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faRotate } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import config from "../../config";
 
 interface productItem {
   items?: {
@@ -15,13 +17,13 @@ export const ProductItem: React.FC<productItem> = ({ items }) => {
   return (
     <div className="  w-[270px] text-sm mb-5 px-4">
       <div className=" m-1 relative">
-        <a href="/">
+        <Link to={config.Routes.singerproduct}>
           <img
             className="w-[270px] h-[360px] object-contain "
             src={items?.thumbnail}
             alt="img"
           />
-        </a>
+        </Link>
         {/* <div className=" absolute top-0 right-0 bottom-0 object-contain   ">
           <div>
             <img
@@ -32,9 +34,12 @@ export const ProductItem: React.FC<productItem> = ({ items }) => {
         </div> */}
       </div>
       <div className=" my-4 flex flex-col items-center">
-        <a className="font-semibold text-xs" href="/">
+        <Link
+          className="font-semibold text-xs"
+          to={config.Routes.singerproduct}
+        >
           {items?.title}
-        </a>
+        </Link>
         <p className="mt-[10px] mb-[20px] text-[#cc797f] font-bold">
           {items?.price} USD
         </p>

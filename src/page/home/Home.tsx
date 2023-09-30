@@ -14,6 +14,8 @@ import { listBlog } from "../../data/mock-listblog";
 import { SlideShowLogo } from "../../components/slideshow/slideShowLogo";
 import { listBanner } from "../../data/mock-listbanner";
 import { TrendingProduct } from "../../components/trendingproduct/TrendingProduct";
+import config from "../../config";
+import { Link } from "react-router-dom";
 
 export function Home() {
   return (
@@ -67,7 +69,7 @@ export function Home() {
             <h3 className=" mb-[0px] border-none">Sale Off</h3>
             <h5 className="mb-[10px] text-[13px] normal-case ">Up to 50%</h5>
             <div className="">
-              <SlideShow />
+              <SlideShow chirldren={false} />
             </div>
             <div className="flex w-full justify-around">
               {blockItem.map((items) => (
@@ -84,9 +86,12 @@ export function Home() {
                           ></img>
                           <div className="relative w-full">
                             <h4 className="pb-[5px] ">
-                              <a className="font-semibold" href="/">
+                              <Link
+                                className="font-semibold"
+                                to={config.Routes.singerproduct}
+                              >
                                 {item.title}
-                              </a>
+                              </Link>
                             </h4>
                             <p className="mb-[10px] text-[#cc797f] font-bold">
                               {item.price} USD
@@ -139,18 +144,18 @@ export function Home() {
                   ></img>
                   <div className="media-body text-[12px]">
                     <h4 className="mb-[15px] font-semibold">
-                      <a href="/">{item.title}</a>
+                      <Link to={config.Routes.page}>{item.title}</Link>
                     </h4>
                     <div className="box-border">
                       <p className="mb-[15px] text-[#8090a1]">
                         {item.description}
                       </p>
-                      <a
+                      <Link
                         className="readmore text-[#cc797f] font-semibold "
-                        href="/"
+                        to={config.Routes.page}
                       >
                         READ MORE
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

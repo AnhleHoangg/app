@@ -2,7 +2,7 @@ import { faClock, faComment, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-export const BlogPost = () => {
+export const BlogPost: React.FC = () => {
   return (
     <div className=" pb-[50px] mb-[40px] border-b">
       <div className="w-[870px]">
