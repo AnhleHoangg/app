@@ -1,7 +1,36 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import {
+  faEye,
+  faEyeSlash,
+  faSpinner,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { loginApi } from "../../services/UserServices";
+import config from "../../config";
 
-const Login = () => {
+const Login: React.FC = () => {
+  const navigate = useNavigate();
+  const [email, setUseName] = useState("");
+  const [password, setPassWord] = useState("");
+  const [isIconShowPW, setIsIconShowPW] = useState(false);
+  const [loadingIcon, setLoandingIcon] = useState(false);
+
+  useEffect(() => {
+    let token = localStorage.getItem("TokenID");
+    if (token) {
+      navigate(config.Routes.home);
+    }
+  }, []);
+  const handleLogin = async () => {
+    setLoandingIcon(true);
+    let res = await loginApi({ email, password });
+    if (res.data.token && res) {
+      localStorage.setItem("TokenID", res.data.token);
+      navigate(config.Routes.home);
+    }
+    setLoandingIcon(false);
+  };
   return (
     <div className="text-xs grid gap-2 grid-cols-2 w-full h-fit py-[70px] tracking-widest uppercase">
       <div className="w-[570px] h-fit box-border border-solid border-4 border-inherit  border-opacity-5 px-[15px] m-auto ">
@@ -11,16 +40,41 @@ const Login = () => {
           <input
             className="w-[460px] h-[42px] border-solid border-2 rounded-3xl	px-[20px] mb-[25px]"
             type="text"
+            value={email}
+            onChange={(e) => setUseName(e.target.value)}
           ></input>
           <label className="mb-[10px]">Your Password *</label>
-          <input
-            className="w-[460px] h-[42px] border-solid border-2 rounded-3xl	px-[20px] mb-[25px]"
-            type="password"
-          ></input>
+          <div className="relative">
+            <input
+              className="w-[460px] h-[42px] border-solid border-2 rounded-3xl	px-[20px] mb-[25px] "
+              type={isIconShowPW === true ? "text" : "password"}
+              value={password}
+              onChange={(e) => setPassWord(e.target.value)}
+            ></input>
+            <div
+              className="absolute top-[13px] right-4 text-[15px]"
+              onClick={() => setIsIconShowPW(!isIconShowPW)}
+            >
+              {isIconShowPW === true ? (
+                <FontAwesomeIcon icon={faEye} />
+              ) : (
+                <FontAwesomeIcon icon={faEyeSlash} />
+              )}
+            </div>
+          </div>
           <button
-            type="submit"
-            className="uppercase text-web-100 py-[10px] px-[30px]  bg-[#cc797f] rounded-3xl"
+            className="uppercase text-web-100 py-[10px] px-[30px]  bg-[#cc797f] rounded-3xl select-none"
+            onClick={(e) => {
+              e.preventDefault();
+              handleLogin();
+            }}
           >
+            {loadingIcon && (
+              <FontAwesomeIcon
+                className="mr-[10px] animate-spin"
+                icon={faSpinner}
+              />
+            )}
             Login
           </button>
           <label className="mt-[20px] mb-[10px] flex justify-center items-center">

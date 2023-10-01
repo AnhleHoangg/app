@@ -17,7 +17,7 @@ export const TrendingProduct: React.FC = () => {
                 return (
                   <span
                     key={item.id}
-                    className="text-[#cc797f] mx-[20px] hover:text-[#cc797f] cursor-pointer"
+                    className=" mx-[20px] hover:text-[#cc797f] cursor-pointer"
                     onClick={() => handleId(item.id)}
                   >
                     {item.title}
