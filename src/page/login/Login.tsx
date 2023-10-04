@@ -6,7 +6,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { loginApi } from "../../services/UserServices";
+import { loginApi, registerAPI } from "../../services/UserServices";
 import config from "../../config";
 
 const Login: React.FC = () => {
@@ -24,13 +24,31 @@ const Login: React.FC = () => {
   }, []);
   const handleLogin = async () => {
     setLoandingIcon(true);
-    let res = await loginApi({ email, password });
-    if (res.data.token && res) {
-      localStorage.setItem("TokenID", res.data.token);
-      navigate(config.Routes.home);
+    try {
+      let res = await loginApi({ email, password });
+      if (res.data.token && res) {
+        localStorage.setItem("TokenID", res.data.token);
+        navigate(config.Routes.home);
+      }
+    } catch (err: any) {
+      alert("Tai Khoan MK Sai");
     }
     setLoandingIcon(false);
   };
+
+  const handleRigister = async () => {
+    try {
+      let res = await registerAPI({ email, password });
+      alert("Tao Tk Thanh Cong");
+      if (res.data.token && res) {
+        localStorage.setItem("TokenID", res.data.token);
+        navigate(config.Routes.home);
+      }
+    } catch (err: any) {
+      alert("Tao Tk Khong Thanh Cong");
+    }
+  };
+
   return (
     <div className="text-xs grid gap-2 grid-cols-2 w-full h-fit py-[70px] tracking-widest uppercase">
       <div className="w-[570px] h-fit box-border border-solid border-4 border-inherit  border-opacity-5 px-[15px] m-auto ">
@@ -85,6 +103,7 @@ const Login: React.FC = () => {
           <NavLink className="text-[#cc797f]" to="/">
             Lost Your Password?
           </NavLink>
+          <div className="normal-case">eve.holt@reqres.in-cityslicka</div>
         </form>
       </div>
       <div className="flex justify-center">
@@ -118,6 +137,10 @@ const Login: React.FC = () => {
           <button
             className="uppercase text-web-100 py-[10px] px-[30px]  bg-[#cc797f] rounded-3xl"
             type="submit"
+            onClick={(e) => {
+              e.preventDefault();
+              handleRigister();
+            }}
           >
             REGISTER
           </button>

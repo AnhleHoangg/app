@@ -1,19 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faRotate } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import config from "../../config";
+import { useDispatch } from "react-redux";
+import { buyProduct } from "../../redux/actions/actions";
+import { useSelector } from "react-redux";
 
 interface productItem {
   items?: {
+    id: number;
     title: string;
     thumbnail: string;
     price: number;
     sale?: number;
+    quanlity: number;
   };
 }
 
 export const ProductItem: React.FC<productItem> = ({ items }) => {
+  const disPatch = useDispatch();
+  const list = useSelector((state: any) => state.cart.cartAr);
+
+  localStorage.setItem("listItem", JSON.stringify(list));
+  const handleOnClick = () => {
+    const action = buyProduct({ items });
+    return disPatch(action);
+  };
   return (
     <div className="  w-[270px] text-sm mb-5 px-4">
       <div className=" m-1 relative">
@@ -24,14 +37,6 @@ export const ProductItem: React.FC<productItem> = ({ items }) => {
             alt="img"
           />
         </Link>
-        {/* <div className=" absolute top-0 right-0 bottom-0 object-contain   ">
-          <div>
-            <img
-              alt="img"
-              src="https://nouthemes.net/html/zorka/assets/images/product-img-4-thumb.jpg"
-            ></img>
-          </div>
-        </div> */}
       </div>
       <div className=" my-4 flex flex-col items-center">
         <Link
@@ -47,6 +52,9 @@ export const ProductItem: React.FC<productItem> = ({ items }) => {
           <button
             className="flex items-center  border-2 p-3  border-[#c2c2c2]  rounded-3xl ct-hoverDefault "
             type="button"
+            onClick={(e) => {
+              handleOnClick();
+            }}
           >
             <span className="font-bold">Add to Cart</span>
           </button>

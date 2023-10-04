@@ -6,16 +6,16 @@ import {
   faRotate,
   faShoppingBag,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
-import { SlideShow } from "../../components/slideshow/slideShow";
-import { Button } from "../../components/button/ButtonSale";
 import { blockItem } from "../../data/mock-blockitem";
-import { listBlog } from "../../data/mock-listblog";
-import { SlideShowLogo } from "../../components/slideshow/slideShowLogo";
-import { listBanner } from "../../data/mock-listbanner";
 import { TrendingProduct } from "../../components/trendingproduct/TrendingProduct";
 import config from "../../config";
-import { Link } from "react-router-dom";
+import { SlideShow } from "../../components/slideshow/slideShow";
+import { Button } from "../../components/button/ButtonSale";
+import { SlideShowLogo } from "../../components/slideshow/slideShowLogo";
+import { listBlog } from "../../data/mock-listblog";
+import { listBanner } from "../../data/mock-listbanner";
 
 export function Home() {
   return (

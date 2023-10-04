@@ -8,4 +8,7 @@ type login={
 const loginApi = (User:login) => {
     return axios.post("/api/login", User);
 }
-export {loginApi};
+const registerAPI = (User:login) => {
+    return axios.post("/api/register", User)
+}
+export {loginApi, registerAPI };

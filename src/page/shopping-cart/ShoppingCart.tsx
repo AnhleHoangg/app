@@ -2,14 +2,28 @@ import { faClose, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { ProductItem, deleteProduct } from "../../redux/actions/actions";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { SlideShow } from "../../components/slideshow/slideShow";
 
 export const ShoppingCart: React.FC = () => {
-  const [upDateQuanlity, setUpDateQuanlity] = useState(1);
-  const [upDateTotal, setUpDateTotal] = useState(upDateQuanlity * 900);
+  const list = useSelector((state: any) => state.cart.cartAr);
+  const dispatch = useDispatch();
+  const item = useSelector((state) => state);
 
-  useEffect(() => {
-    setUpDateTotal(upDateQuanlity * 900);
-  }, [upDateQuanlity]);
+  localStorage.setItem("listItem", JSON.stringify(list));
+  const listItemProduct = localStorage.getItem("listItem");
+  let parsedData;
+  if (listItemProduct !== null) {
+    parsedData = JSON.parse(listItemProduct);
+  } else {
+    console.log("Khong tim thay du lieu");
+  }
+  const handleClose = (items: ProductItem) => {
+    const action = deleteProduct(items);
+    return dispatch(action);
+  };
 
   return (
     <div className="w-full flex flex-col justify-between items-center pt-[70px]">
@@ -31,60 +45,58 @@ export const ShoppingCart: React.FC = () => {
                 </tr>
               </thead>
             </table>
-            {/* {list product cart} */}
-            <div className="flex text-center border-b border-[#858484d4] font-semibold ">
-              <Link
-                to="#"
-                className=" flex items-center justify-center w-[60px]"
-              >
-                <FontAwesomeIcon icon={faClose} />
-              </Link>
-              <Link className="w-[117px] h-[114px] p-[10px]" to="">
-                <img
-                  className="object-contain"
-                  src="https://nouthemes.net/html/zorka/assets/images/small-product-1.jpg"
-                  alt="img"
-                />
-              </Link>
-              <Link
-                to="/"
-                className="w-[410px] p-[10px] text-center flex items-center"
-              >
-                COAT WITH WOOL WRAPAROUND COLLAR
-              </Link>
-              <span className="w-[175px] text-center flex items-center text-[#cc797f] ">
-                900USD
-              </span>
-              <div className="quantity w-[234px] p-[10px] h-[114px] flex justify-center items-center">
-                <div className="w-[120px] px-[5px] h-[36px] border flex justify-between rounded-3xl">
+            {parsedData.map((items: ProductItem, index: number) => (
+              <div className="flex text-center border-b border-[#858484d4] font-semibold ">
+                <Link
+                  to="#"
+                  className=" flex items-center justify-center w-[60px]"
+                >
                   <button
-                    onClick={(e) => {
-                      setUpDateQuanlity(upDateQuanlity - 1);
+                    className="w-[60px] h-[114px]"
+                    onClick={() => {
+                      handleClose(items);
                     }}
-                    className="minus-btn p-[2px]"
                   >
-                    <FontAwesomeIcon icon={faMinus} />
+                    <FontAwesomeIcon key={items.items?.id} icon={faClose} />
                   </button>
-                  <span className="flex items-center justify-center">
-                    {upDateQuanlity}
-                  </span>
-                  <button
-                    onClick={(e) => {
-                      setUpDateQuanlity(upDateQuanlity + 1);
-                    }}
-                    className="plus-btn p-[2px]"
-                  >
-                    <FontAwesomeIcon icon={faPlus} />
-                  </button>
+                </Link>
+                <Link
+                  className="w-[117px] h-[114px] p-[10px] overflow-hidden "
+                  to=""
+                >
+                  <img
+                    className=""
+                    src={items.items?.thumbnail}
+                    alt="Lehoanganh"
+                  />
+                </Link>
+                <Link
+                  to="/"
+                  className="w-[410px] p-[10px] text-center flex items-center"
+                >
+                  {items.items?.title}
+                </Link>
+                <span className="w-[175px] text-center flex items-center text-[#cc797f] ">
+                  {items.items?.price}
+                </span>
+                <div className="quantity w-[234px] p-[10px] h-[114px] flex justify-center items-center">
+                  <div className="w-[120px] px-[5px] h-[36px] border flex justify-between rounded-3xl">
+                    <button className="minus-btn p-[2px]">
+                      <FontAwesomeIcon icon={faMinus} />
+                    </button>
+                    <span className="flex items-center justify-center">1</span>
+                    <button className="plus-btn p-[2px]">
+                      <FontAwesomeIcon icon={faPlus} />
+                    </button>
+                  </div>
                 </div>
+                <span className="amount flex justify-center items-center w-[170px] text-[#cc797f]"></span>
+                <Link to="#" className="remove">
+                  <i className="fa fa-times" />
+                </Link>
               </div>
-              <span className="amount flex justify-center items-center w-[170px] text-[#cc797f]">
-                {upDateTotal}
-              </span>
-              <Link to="#" className="remove">
-                <i className="fa fa-times" />
-              </Link>
-            </div>
+            ))}
+
             {/* {Btn coupon } */}
             <div className="flex justify-between items-center pt-[40px] px-[10px] pb-[10px] font-semibold">
               <div className="">
@@ -100,6 +112,14 @@ export const ShoppingCart: React.FC = () => {
                 <button className="px-[25px] pt-[9px] pb-[10px] bg-[#cc797f] rounded-3xl text-[white] uppercase">
                   Process To Checkout
                 </button>
+              </div>
+            </div>
+            <div className="w-[1200px] pt-[25px]">
+              <div className="flex flex-col justify-between items-center">
+                <h3 className=" tracking-[7px] font-bold ">RELATED PRODUCTS</h3>
+              </div>
+              <div>
+                <SlideShow chirldren={false} />
               </div>
             </div>
           </div>

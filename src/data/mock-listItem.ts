@@ -3,25 +3,32 @@ export const listItem = [
         id: 0,
         title: "Features",
         item: [
-           {
+           {    id:1,
                 title: "HANDMADE FLARED JACKET",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-1.jpg",
                 price: 189.99,
+                quanlity: 1,
             },
-            {
+            {id:2,
                 title: "COAT WITH WOOL WRAPAROUND",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-2.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
-            {
+            {id:3,
                 title: "UTILITY JACKET",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-3.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
-            {
+            {id:4,
                 title: "ANIMAL PRINT COAT",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-4.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
         ],
     },
@@ -29,25 +36,33 @@ export const listItem = [
         id: 1,
         title: "Men Style",
         item: [
-            {
+            {id:5,
                 title: "HANDMADE FLARED JACKET",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-10.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
-            {
+            {id:6,
                 title: "COAT WITH WOOL WRAPAROUND",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-11.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
-            {
+            {id:7,
                 title: "UTILITY JACKET",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-9.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
-            {
+            {id:8,
                 title: "ANIMAL PRINT COAT",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-8.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
         ],
     },
@@ -55,25 +70,33 @@ export const listItem = [
         id: 2,
         title: "Women Style",
         item: [
-            {
+            {id:10,
                 title: "HANDMADE FLARED JACKET",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-1",
                 price: 189.99,
+                quanlity: 1,
+
             },
-            {
+            {id:11,
                 title: "COAT WITH WOOL WRAPAROUND",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-2.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
-            {
+            {id:12,
                 title: "UTILITY JACKET",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-3.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
-            {
+            {id:13,
                 title: "ANIMAL PRINT COAT",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-4.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
         ],
     },
@@ -81,25 +104,33 @@ export const listItem = [
         id: 3,
         title: "Kid Style",
         item:[
-            {
+            {   id:14,
                 title: "HANDMADE FLARED JACKET",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-1.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
-            {
+            {   id:15,
                 title: "COAT WITH WOOL WRAPAROUND",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-2.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
-            {
+            {   id:16,
                 title: "UTILITY JACKET",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-3.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
-            {
+            {   id:17,
                 title: "ANIMAL PRINT COAT",
                 thumbnail: "https://nouthemes.net/html/zorka/assets/images/product-img-4.jpg",
                 price: 189.99,
+                quanlity: 1,
+
             },
         ],
     },
