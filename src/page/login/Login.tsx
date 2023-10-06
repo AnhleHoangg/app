@@ -4,7 +4,7 @@ import {
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { loginApi, registerAPI } from "../../services/UserServices";
 import config from "../../config";
@@ -16,18 +16,13 @@ const Login: React.FC = () => {
   const [isIconShowPW, setIsIconShowPW] = useState(false);
   const [loadingIcon, setLoandingIcon] = useState(false);
 
-  useEffect(() => {
-    let token = localStorage.getItem("TokenID");
-    if (token) {
-      navigate(config.Routes.home);
-    }
-  }, []);
   const handleLogin = async () => {
     setLoandingIcon(true);
     try {
       let res = await loginApi({ email, password });
       if (res.data.token && res) {
         localStorage.setItem("TokenID", res.data.token);
+        window.dispatchEvent(new Event("storage"));
         navigate(config.Routes.home);
       }
     } catch (err: any) {
@@ -80,10 +75,11 @@ const Login: React.FC = () => {
               )}
             </div>
           </div>
+
           <button
             className="uppercase text-web-100 py-[10px] px-[30px]  bg-[#cc797f] rounded-3xl select-none"
+            type="button"
             onClick={(e) => {
-              e.preventDefault();
               handleLogin();
             }}
           >
