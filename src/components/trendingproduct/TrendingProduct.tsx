@@ -8,7 +8,7 @@ export const TrendingProduct: React.FC = () => {
     setSubItems(listItem[id]);
   };
   return (
-    <div>
+    <div className="">
       <div className=" box-border w-[1200px] h-fit ">
         <div className="w-full text-center mb-[20px]">
           <div className="pb-[10px] mb-[5px] ">
@@ -25,9 +25,9 @@ export const TrendingProduct: React.FC = () => {
                 );
               })}
             </div>
-            <div className=" flex ">
+            <div className=" flex flex-col items-center md:flex md:flex-row ">
               {subItems.item.map((item) => (
-                <div key={item.title} className="px-[15px] ">
+                <div key={item.title} className=" md:px-[15px] px-[0px]">
                   <ProductItem items={item} />
                 </div>
               ))}

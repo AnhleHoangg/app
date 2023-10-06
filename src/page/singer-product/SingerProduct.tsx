@@ -17,11 +17,11 @@ export const SingerProduct = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="flex justify-center pt-[70px]">
+      <div className="flex flex-col md:flex-row justify-center pt-[0px] md:pt-[70px]">
         <div>
           <Showproduct />
         </div>
-        <div className="w-[600px] px-[15px]">
+        <div className="w-[600px] px-[15px] mt-[25px] md:mt-0">
           <div className="text-[12px]">
             <BreadCrums />
           </div>

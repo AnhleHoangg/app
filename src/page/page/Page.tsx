@@ -67,19 +67,16 @@ const listTag = [
 
 export const Page: React.FC = () => {
   return (
-    <div className="flex flex-col items-center ">
-      <div className="w-[1200px] py-[70px] flex">
-        <div className="pr-[30px]">
-          <BlogPost />
-          <BlogPost />
-          <BlogPost />
+    <div className="flex justify-center items-center ">
+      <div className=" md:w-[1200px] py-[70px] flex flex-col md:flex-row">
+        <div className="md:pr-[30px] px-[15px]">
           <BlogPost />
           <div className="flex justify-center">
             <Pagination total={9} color="gray" radius="9999px" size="lg" />
           </div>
         </div>
-
-        <div className="px-[15px] w-[300px]">
+        {/* sidebar */}
+        <div className="px-[15px] w-[300px]  mt-[50px] md:mt-[0px]">
           <aside className="mb-[50px]">
             <h4 className=" pb-[5px] border-b mb-[20px] ">GET CONNECTED</h4>
             <ul className="block">

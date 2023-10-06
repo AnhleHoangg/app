@@ -105,7 +105,7 @@ function DefaultLayout({ children }: layoutProps) {
         </div>
       </div>
       <div className="w-full mt-[180px] z-0"> {children} </div>
-      <div>
+      <div className="px-20">
         <Footer></Footer>
       </div>
     </div>

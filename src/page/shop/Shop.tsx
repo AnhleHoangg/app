@@ -11,11 +11,14 @@ export const Shop: React.FC = () => {
           Shop
         </h1>
         <div className="w-full mb-[30px]">
-          <div className=" flex justify-between">
-            <div className="text-[11px]">SHOWING 1–12 OF 100 RESULTS</div>
-            <div>
+          <div className=" flex justify-center items-center md:justify-between ">
+            <div className="text-[11px] px-[50px]">
+              SHOWING 1–12 OF 100 RESULTS
+            </div>
+            <div className="px-[50px]">
               <Select
                 placeholder="DEFAULT SORTING"
+                color="#fafafa"
                 size="sm"
                 radius={"10px"}
                 limit={2}
@@ -29,11 +32,14 @@ export const Shop: React.FC = () => {
               ></Select>
             </div>
           </div>
-          <div>
+          <div className="flex flex-col items-center justify-center md:items-start">
             {listItem.map((item) => (
-              <div className="flex">
+              <div className=" md:flex w-[600px]">
                 {item.item.map((item) => (
-                  <div key={item.title} className="px-[15px] ">
+                  <div
+                    key={item.title}
+                    className="px-[15px] w-fit inline-block "
+                  >
                     <ProductItem items={item} />
                   </div>
                 ))}

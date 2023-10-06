@@ -34,8 +34,8 @@ export function Home() {
           <h5 className="mb-[30px] text-[13px] normal-case ">Trending</h5>
           <TrendingProduct />
 
-          <div className=" w-[1200px] flex justify-between -tracking-tighter mt-[40px] mb-[10px] ">
-            <div className="box-border w-[570px] h-[220px] bg-[url('https://nouthemes.net/html/zorka/assets/images/home-bg-1.jpg')] bg-center bg-cover">
+          <div className=" w-[1200px] flex md:flex-row flex-col items-center justify-between -tracking-tighter mt-[40px] mb-[10px]">
+            <div className="mb-[10px] box-border w-[570px] h-[220px] bg-[url('https://nouthemes.net/html/zorka/assets/images/home-bg-1.jpg')] bg-center bg-cover">
               <a className=" " href="/">
                 <h3 className="border-none w-full h-full flex justify-center items-center font-bold text-[30px] text-[white]">
                   Zorka
@@ -71,9 +71,9 @@ export function Home() {
             <div className="">
               <SlideShow chirldren={false} />
             </div>
-            <div className="flex w-full justify-around">
+            <div className="flex flex-col md:flex-row items-center justify-center w-full md:justify-around">
               {blockItem.map((items) => (
-                <div className=" box-border w-[370px] bg-[#fafafa] p-[30px] pb-0">
+                <div className="w-[550px] box-border md:w-[370px] bg-[#fafafa] p-[30px] pb-0 mb-10">
                   <h3 className="mt-[10px] mb-[30px]">{items.name}</h3>
                   <div className="flex w-[310px]">
                     <div className="relative">
@@ -134,9 +134,9 @@ export function Home() {
           <div className=" blog-updates w-[1200px] flex flex-col items-center pt-[60px]">
             <h3 className=" mb-[0px] border-none">BLOG UPDATES</h3>
             <h5 className="mb-[60px] text-[13px] normal-case ">Our stories</h5>
-            <div className="flex">
+            <div className="flex flex-col md:flex-row">
               {listBlog.map((item) => (
-                <div className="w-[400px] h-[150px] px-[15px] flex -tracking-tighter">
+                <div className="w-[550px] md:w-[400px] h-[150px] px-[15px] flex -tracking-tighter mb-10">
                   <img
                     className="w-[170px] h-[150px] pr-[20px]"
                     src={item.thumbnail}
@@ -193,9 +193,9 @@ export function Home() {
         <div className="flex justify-center">
           <SlideShowLogo />
         </div>
-        <div className=" mediaOpen w-1200px flex justify-center py-[50px] border-t border-[#b5b5b5]">
+        <div className=" mediaOpen w-1200px flex flex-col md:flex-row justify-center items-center py-[50px] border-t border-[#b5b5b5]">
           {listBanner.map((item) => (
-            <div className="w-[370px] px-[40px] py-[30px] mx-[15px] bg-[white] border border-[#cc797f] ct-hoverDefault group">
+            <div className="w-[550px] md:w-[370px] px-[40px] py-[30px] mx-[15px] mb-[5px] bg-[white] border border-[#cc797f] ct-hoverDefault group">
               <div className="media flex ">
                 <div className="media-left flex justify-center items-center ">
                   <FontAwesomeIcon

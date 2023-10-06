@@ -45,7 +45,7 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="text-xs grid gap-2 grid-cols-2 w-full h-fit py-[70px] tracking-widest uppercase">
+    <div className="w-[1200px] mx-auto text-xs grid gap-2 md:grid-cols-2 grid-cols-1 h-fit py-[70px] tracking-widest uppercase">
       <div className="w-[570px] h-fit box-border border-solid border-4 border-inherit  border-opacity-5 px-[15px] m-auto ">
         <form className="flex flex-col p-[50px] items-center box-border  bg-web-100 ">
           <p className=" mb-[50px] text-3xl">Login</p>

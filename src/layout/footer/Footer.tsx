@@ -8,10 +8,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { iconPay } from "../../data/mock-data";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
-    <div>
-      <div className=" pt-[70px] pb-[30px] w-screen bg-web-100 flex justify-around uppercase text-xs tracking-widest">
+    <div className="flex flex-col ml-[50px] md:ml-0">
+      <div className=" pt-[70px] pb-[30px] w-screen bg-web-100 flex md:flex-row flex-col justify-around uppercase text-xs tracking-widest">
         <div className=" flex-[1/4] px-[15px]">
           <h3>Location</h3>
           <div className="pt-2 mb-[30px] font-semibold">
@@ -133,11 +133,11 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className=" flex box-border bg-web-100 pt-[50px] justify-around">
-        <span className="mt-[10px] text-xs ">
+      <div className=" flex flex-col md:flex-row box-border bg-web-100 pt-[50px] justify-around">
+        <span className="mt-[10px] text-xs mb-[10px]">
           ©COPYRIGHT 2015.THEME MADE BY THEMEMOVE
         </span>
-        <ul className="flex mt-[10px] mb-[10px]  ">
+        <ul className="flex  mt-[10px] mb-[10px]  ">
           {iconPay.map((item) => (
             <li className=" px-2 cursor-pointer ">
               <img src={item.thumNail} alt="Lehoanganh"></img>

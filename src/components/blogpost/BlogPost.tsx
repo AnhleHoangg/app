@@ -5,7 +5,7 @@ import React from "react";
 export const BlogPost: React.FC = () => {
   return (
     <div className=" pb-[50px] mb-[40px] border-b">
-      <div className="w-[870px]">
+      <div className="w-[641px] md:w-[870px]">
         <h3 className="mb-[25px] border-none text-[36px]">
           <a href="single-post.html">Zorka Men Spring/Summer Vacation</a>
         </h3>
