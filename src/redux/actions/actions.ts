@@ -25,9 +25,3 @@ export const deleteProduct = (product:ProductItem) => {
     payload: product,
   };
 };
-export const checkProduct = (product:ProductItem) => {
-  return {
-    type: actionType.CHECK,
-    payload: product,
-  };
-};

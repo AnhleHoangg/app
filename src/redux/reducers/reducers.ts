@@ -71,8 +71,7 @@ export const cartProduct = (state = listCart, action: Action) => {
             }
             
         }else {console.log("ko co du lieu");
-    return {...state}}
-        case actionType.BUY_PRODUCT && actionType.CHECK:
+        return {...state}}
 
         default:
           return state;

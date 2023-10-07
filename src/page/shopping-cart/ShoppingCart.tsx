@@ -1,6 +1,6 @@
 import { faClose, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ProductItem, deleteProduct } from "../../redux/actions/actions";
 import { useDispatch } from "react-redux";
@@ -10,20 +10,20 @@ import { SlideShow } from "../../components/slideshow/slideShow";
 export const ShoppingCart: React.FC = () => {
   const dispatch = useDispatch();
   const list = useSelector((state: any) => state.cart.cartAr);
-  const listItemProduct = localStorage.getItem("listItem");
-
   localStorage.setItem("listItem", JSON.stringify(list));
-  let parsedData;
-  if (listItemProduct !== null) {
-    parsedData = JSON.parse(listItemProduct);
-  } else {
-    console.log("Khong tim thay du lieu");
-  }
 
   const handleClose = (items: ProductItem) => {
     const action = deleteProduct(items);
     return dispatch(action);
   };
+
+  const listItem = localStorage.getItem("listItem");
+  let parsedData;
+  if (listItem != null) {
+    parsedData = JSON.parse(listItem);
+  } else {
+    console.log("Khong co data");
+  }
 
   return (
     <div className="w-full flex flex-col justify-between items-center pt-[70px]">
@@ -46,9 +46,13 @@ export const ShoppingCart: React.FC = () => {
                   </tr>
                 </thead>
               </table>
-              {parsedData.map((items: ProductItem, index: number) => (
-                <div className="flex text-center border-b border-[#858484d4] font-semibold text-[12px] md:text-[16px]">
+              {parsedData.map((items: ProductItem) => (
+                <div
+                  key={items.items?.id}
+                  className="flex text-center border-b border-[#858484d4] font-semibold text-[12px] md:text-[16px]"
+                >
                   <Link
+                    key={items.items?.id}
                     to="#"
                     className=" flex items-center justify-center w-[60px]"
                   >

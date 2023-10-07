@@ -20,9 +20,7 @@ interface productItem {
 
 export const ProductItem: React.FC<productItem> = ({ items }) => {
   const disPatch = useDispatch();
-  const list = useSelector((state: any) => state.cart.cartAr);
   const handleOnClick = () => {
-    localStorage.setItem("listItem", JSON.stringify(list));
     const action = buyProduct({ items });
     return disPatch(action);
   };

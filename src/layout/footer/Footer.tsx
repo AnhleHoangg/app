@@ -139,7 +139,7 @@ export const Footer: React.FC = () => {
         </span>
         <ul className="flex  mt-[10px] mb-[10px]  ">
           {iconPay.map((item) => (
-            <li className=" px-2 cursor-pointer ">
+            <li key={item.thumNail} className=" px-2 cursor-pointer ">
               <img src={item.thumNail} alt="Lehoanganh"></img>
             </li>
           ))}
