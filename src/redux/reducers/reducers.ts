@@ -11,7 +11,7 @@ type Action ={
     payload: ProductItem;
 }
 const listCart:listCart = {
-    cartAr: [],
+    cartAr:  JSON.parse(localStorage.getItem("listItem")!) || [],
     number: 0
 }
 

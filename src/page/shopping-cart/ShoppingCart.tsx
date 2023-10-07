@@ -10,8 +10,8 @@ import { SlideShow } from "../../components/slideshow/slideShow";
 export const ShoppingCart: React.FC = () => {
   const dispatch = useDispatch();
   const list = useSelector((state: any) => state.cart.cartAr);
-  localStorage.setItem("listItem", JSON.stringify(list));
 
+  localStorage.setItem("listItem", JSON.stringify(list));
   const handleClose = (items: ProductItem) => {
     const action = deleteProduct(items);
     return dispatch(action);
