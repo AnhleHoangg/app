@@ -7,7 +7,7 @@ export interface ProductItem {
       thumbnail: string;
       price: number;
       sale?: number;
-      quanlity: number ;
+      quanlity: number;
     };
   }
   
@@ -22,6 +22,12 @@ export const buyProduct = (product:ProductItem) => {
 export const deleteProduct = (product:ProductItem) => {
   return {
     type: actionType.DELETE_PRODUCT,
+    payload: product,
+  };
+};
+export const checkProduct = (product:ProductItem) => {
+  return {
+    type: actionType.CHECK,
     payload: product,
   };
 };

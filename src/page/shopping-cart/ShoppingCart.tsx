@@ -8,18 +8,18 @@ import { useSelector } from "react-redux";
 import { SlideShow } from "../../components/slideshow/slideShow";
 
 export const ShoppingCart: React.FC = () => {
-  const list = useSelector((state: any) => state.cart.cartAr);
   const dispatch = useDispatch();
-  const item = useSelector((state) => state);
+  const list = useSelector((state: any) => state.cart.cartAr);
+  const listItemProduct = localStorage.getItem("listItem");
 
   localStorage.setItem("listItem", JSON.stringify(list));
-  const listItemProduct = localStorage.getItem("listItem");
   let parsedData;
   if (listItemProduct !== null) {
     parsedData = JSON.parse(listItemProduct);
   } else {
     console.log("Khong tim thay du lieu");
   }
+
   const handleClose = (items: ProductItem) => {
     const action = deleteProduct(items);
     return dispatch(action);
@@ -82,7 +82,7 @@ export const ShoppingCart: React.FC = () => {
                         <FontAwesomeIcon icon={faMinus} />
                       </button>
                       <span className="flex items-center justify-center">
-                        1
+                        {items.items?.quanlity}
                       </span>
                       <button className="plus-btn p-[2px]">
                         <FontAwesomeIcon icon={faPlus} />

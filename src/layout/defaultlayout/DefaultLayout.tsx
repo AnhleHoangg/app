@@ -13,6 +13,7 @@ type layoutProps = {
 };
 
 function DefaultLayout({ children }: layoutProps) {
+  
   const [menu, setMenu] = useState(true);
   return (
     <div className=" flex flex-col items-center relative">
