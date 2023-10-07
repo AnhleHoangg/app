@@ -22,8 +22,10 @@ export const cartProduct = (state = listCart, action: Action) => {
             const productInCart = state.cartAr.find(
                 (items) => items.items?.id === action.payload.items?.id
               );
+              
             if(!productInCart){
                 const newNumber = state.number +1;
+                action.payload.items!.quanlity = 1;
                 return {
                     ...state,
                     cartAr: [...state.cartAr, action.payload],
@@ -52,7 +54,7 @@ export const cartProduct = (state = listCart, action: Action) => {
             const objIndex = parsedData.findIndex((obj:ProductItem) =>  obj.items?.id == action.payload.items?.id);
              parsedData.splice(objIndex, 1);
              if(action.payload.items?.quanlity !== undefined){
-                const oldNumber = state.number - action.payload.items?.quanlity;
+                 const oldNumber = state.number - action.payload.items?.quanlity;
                 return {
                     ...state,
                      cartAr: [...parsedData],
