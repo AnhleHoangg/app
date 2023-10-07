@@ -10,7 +10,7 @@ import { iconPay } from "../../data/mock-data";
 
 export const Footer: React.FC = () => {
   return (
-    <div className="flex flex-colgit md:ml-0">
+    <div className="flex flex-col md:ml-0">
       <div className=" pt-[70px] pb-[30px] w-screen bg-web-100 flex md:flex-row flex-col justify-around uppercase text-xs tracking-widest">
         <div className=" flex-[1/4] px-[15px]">
           <h3>Location</h3>
