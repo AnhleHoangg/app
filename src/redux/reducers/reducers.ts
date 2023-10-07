@@ -46,9 +46,7 @@ export const cartProduct = (state = listCart, action: Action) => {
                 }
             }
         case actionType.DELETE_PRODUCT:
-
             const oldList = localStorage.getItem("listItem");
-
             if(oldList){
             let parsedData = JSON.parse(oldList);
             const objIndex = parsedData.findIndex((obj:ProductItem) =>  obj.items?.id == action.payload.items?.id);
