@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import config from "../../config";
 
-export const NotFound = () => {
+export const NotFound: React.FC = () => {
   return (
     <div className="flex flex-col md:flex justify-center">
       <Container className="flex justify-around">
