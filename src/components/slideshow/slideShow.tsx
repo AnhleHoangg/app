@@ -26,7 +26,7 @@ export const SlideShow: React.FC<children> = (props) => {
           <ButtonNextPrev />
         </div>
         {listproduct.map((item) => (
-          <div>
+          <div key={item.id}>
             <SwiperSlide>
               <ProductItem items={item} />
             </SwiperSlide>

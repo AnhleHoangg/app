@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import config from "../../config";
 import { useDispatch } from "react-redux";
 import { buyProduct } from "../../redux/actions/actions";
+import { useSelector } from "react-redux";
 
 interface productItem {
   items?: {

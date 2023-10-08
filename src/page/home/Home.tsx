@@ -73,12 +73,15 @@ export function Home() {
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center w-full md:justify-around">
               {blockItem.map((items) => (
-                <div className="  w-screen box-border md:w-[370px] bg-[#fafafa] p-[30px] pb-0 mb-10">
+                <div key={items.id} className="  w-screen box-border md:w-[370px] bg-[#fafafa] p-[30px] pb-0 mb-10">
                   <h3 className="mt-[10px] mb-[30px]">{items.name}</h3>
                   <div className="flex w-[310px]">
                     <div className="relative">
                       {items.filter.map((item) => (
-                        <div key={item.title} className="w-full flex text-[13px]  mb-[30px]">
+                        <div
+                          key={item.title}
+                          className="w-full flex text-[13px]  mb-[30px]"
+                        >
                           <img
                             className="w-[110px] h-[130px] mr-[10px]"
                             src={item.thumbnail}
@@ -136,7 +139,10 @@ export function Home() {
             <h5 className="mb-[60px] text-[13px] normal-case ">Our stories</h5>
             <div className="flex flex-col md:flex-row">
               {listBlog.map((item) => (
-                <div key={item.title} className="w-screen md:w-[400px] h-[150px] px-[15px] flex -tracking-tighter mb-10">
+                <div
+                  key={item.title}
+                  className="w-screen md:w-[400px] h-[150px] px-[15px] flex -tracking-tighter mb-10"
+                >
                   <img
                     className="w-[170px] h-[150px] pr-[20px]"
                     src={item.thumbnail}
@@ -195,7 +201,7 @@ export function Home() {
         </div>
         <div className=" mediaOpen w-1200px flex flex-col md:flex-row justify-center items-center py-[50px] border-t border-[#b5b5b5]">
           {listBanner.map((item) => (
-            <div className="w-screen md:w-[370px] px-[40px] py-[30px] mx-[15px] mb-[5px] bg-[white] border border-[#cc797f] ct-hoverDefault group">
+            <div key={item.title} className="w-screen md:w-[370px] px-[40px] py-[30px] mx-[15px] mb-[5px] bg-[white] border border-[#cc797f] ct-hoverDefault group">
               <div className="media flex ">
                 <div className="media-left flex justify-center items-center ">
                   <FontAwesomeIcon

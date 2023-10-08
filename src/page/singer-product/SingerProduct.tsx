@@ -30,8 +30,8 @@ export const SingerProduct = () => {
           </h2>
           <div>
             <span className="mr-[20px]">30 Reviews</span>
-            {[1, 2, 3, 4].map(() => (
-              <span>
+            {[1, 2, 3, 4].map((index) => (
+              <span key={index}>
                 <FontAwesomeIcon className="text-[#fdd34d]" icon={faStar} />
               </span>
             ))}

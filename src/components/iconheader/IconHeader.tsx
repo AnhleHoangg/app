@@ -42,7 +42,7 @@ export const IconHeader: React.FC = () => {
               ></img>
             </Link>
           </div>
-          <div className=" md:w-[116px] text-center flex justify-center text-3xl text-gray-600 cursor-pointer relative group w-fit mx-[60px]">
+          <div className=" md:w-[116px] text-center flex justify-center text-3xl text-gray-600 cursor-pointer relative group w-fit mx-[60px] md:mx-[0px]">
             <Link className="flex" to={config.Routes.shoppingcart}>
               <FontAwesomeIcon className="z-0 " icon={faCartArrowDown} />
               <div className=" absolute top-[-10px] right-[28px] bg-[#cc797f] rounded-full text-[10px] text-[white] px-2 font-bold h-[21px] flex items-center group-hover:animate-bounce ">
