@@ -73,7 +73,7 @@ export function Home() {
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center w-full md:justify-around">
               {blockItem.map((items) => (
-                <div key={items.id} className="  w-screen box-border md:w-[370px] bg-[#fafafa] p-[30px] pb-0 mb-10">
+                <div className="  w-screen box-border md:w-[370px] bg-[#fafafa] p-[30px] pb-0 mb-10">
                   <h3 className="mt-[10px] mb-[30px]">{items.name}</h3>
                   <div className="flex w-[310px]">
                     <div className="relative">
@@ -195,7 +195,7 @@ export function Home() {
         </div>
         <div className=" mediaOpen w-1200px flex flex-col md:flex-row justify-center items-center py-[50px] border-t border-[#b5b5b5]">
           {listBanner.map((item) => (
-            <div key={item.slogan} className="w-screen md:w-[370px] px-[40px] py-[30px] mx-[15px] mb-[5px] bg-[white] border border-[#cc797f] ct-hoverDefault group">
+            <div className="w-screen md:w-[370px] px-[40px] py-[30px] mx-[15px] mb-[5px] bg-[white] border border-[#cc797f] ct-hoverDefault group">
               <div className="media flex ">
                 <div className="media-left flex justify-center items-center ">
                   <FontAwesomeIcon

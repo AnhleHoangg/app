@@ -34,7 +34,7 @@ export const Shop: React.FC = () => {
           </div>
           <div className="flex flex-col items-center justify-center md:items-start">
             {listItem.map((item) => (
-              <div key={item.id} className=" md:flex w-screen">
+              <div className=" md:flex w-screen">
                 {item.item.map((item) => (
                   <div
                     key={item.title}

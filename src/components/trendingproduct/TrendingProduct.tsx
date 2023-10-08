@@ -27,7 +27,7 @@ export const TrendingProduct: React.FC = () => {
             </div>
             <div className=" flex flex-col items-center md:flex md:flex-row ">
               {subItems.item.map((item) => (
-                <div key={item.title} className=" md:px-[15px] px-[0px]">
+                <div className=" md:px-[15px] px-[0px]">
                   <ProductItem items={item} />
                 </div>
               ))}
