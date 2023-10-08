@@ -19,7 +19,9 @@ function DefaultLayout({ children }: layoutProps) {
       <div className=" flex flex-col items-center relative">
         <div className="fixed top-0 left-0 right-0 z-50">
           <div className="flex-col">
-            <LoginHeader />
+            <div className="w-[full] flex justify-center bg-[#fafafa]">
+              <LoginHeader />
+            </div>
             <div className="bg-[#fafafa] flex-col relative">
               <button
                 onClick={() => {
@@ -40,7 +42,7 @@ function DefaultLayout({ children }: layoutProps) {
                         icon={faXmark}
                       />
                     </div>
-                    <div className="w-[768px] h-[220px] py-[10px] bg-[#fafafa] flex-col uppercase font-bold">
+                    <div className="w-screen h-[220px] py-[10px] bg-[#fafafa] flex-col uppercase font-bold">
                       <div className="w-[full] h-[50px] py-[5px] flex justify-center items-center ct-hoverDefault">
                         <Link
                           className="w-[full] h-[full] text-[20px]"

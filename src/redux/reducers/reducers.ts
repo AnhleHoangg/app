@@ -10,9 +10,19 @@ type Action ={
     type: string;
     payload: ProductItem;
 }
+const totalCart = () => {
+   const number = JSON.parse(localStorage.getItem("listItem")!)
+   let sum = 0;
+   for (let i = 0; i < number.length; i++){
+       sum = number[i].items?.quanlity + sum;
+       console.log(sum);
+   }
+   return sum;
+}
+const totalShoppingCart = totalCart();
 const listCart:listCart = {
     cartAr:  JSON.parse(localStorage.getItem("listItem")!) || [],
-    number: 0
+    number: totalShoppingCart || 0
 }
 
 

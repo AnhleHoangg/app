@@ -18,6 +18,9 @@ module.exports = {
         changeDir: "changeDir 5s ease-in-out infinite",
       },
     },
+    // screens: {
+    //   mobile: "450px",
+    // },
   },
   plugins: [],
 };

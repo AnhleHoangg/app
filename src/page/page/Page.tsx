@@ -68,8 +68,8 @@ const listTag = [
 export const Page: React.FC = () => {
   return (
     <div className="flex justify-center items-center ">
-      <div className=" md:w-[1200px] py-[70px] flex flex-col md:flex-row">
-        <div className="md:pr-[30px] px-[15px]">
+      <div className=" w-screen md:w-[1200px] py-[70px] flex flex-col md:flex-row">
+        <div className="md:pr-[30px] pl-[15px] md:px-[15px]">
           <BlogPost />
           <div className="flex justify-center">
             <Pagination total={9} color="gray" radius="9999px" size="lg" />

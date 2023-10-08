@@ -9,7 +9,7 @@ export const TrendingProduct: React.FC = () => {
   };
   return (
     <div className="">
-      <div className=" box-border w-[1200px] h-fit ">
+      <div className="box-border md:w-[1200px] h-fit ">
         <div className="w-full text-center mb-[20px]">
           <div className="pb-[10px] mb-[5px] ">
             <div className="mb-[10px] select-none">
@@ -17,7 +17,7 @@ export const TrendingProduct: React.FC = () => {
                 return (
                   <span
                     key={item.id}
-                    className=" mx-[20px] hover:text-[#cc797f] cursor-pointer"
+                    className=" mx-[20px] hover:text-[#cc797f] cursor-pointer items-center"
                     onClick={() => handleId(item.id)}
                   >
                     {item.title}

@@ -4,8 +4,8 @@ import React from "react";
 
 export const BlogPost: React.FC = () => {
   return (
-    <div className=" pb-[50px] mb-[40px] border-b">
-      <div className="w-[641px] md:w-[870px]">
+    <div className="pb-[50px] mb-[40px] border-b">
+      <div className="w-screen md:w-[870px]">
         <h3 className="mb-[25px] border-none text-[36px]">
           <a href="single-post.html">Zorka Men Spring/Summer Vacation</a>
         </h3>
@@ -38,7 +38,7 @@ export const BlogPost: React.FC = () => {
             alt="img"
           />
         </div>
-        <div className="mb-[30px]">
+        <div className="block mb-[30px] pr-5">
           Cras ut magna quis metus tristique vulputate. Ut a sapien scelerisque,
           fermentum lorem a, aliquet mi. Ut lobortis lorem nisl, vel euismod
           ligula ornare quis. In consectetur elit sed leo fringilla, a placerat

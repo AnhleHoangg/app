@@ -45,13 +45,13 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="w-[1200px] mx-auto text-xs grid gap-2 md:grid-cols-2 grid-cols-1 h-fit py-[70px] tracking-widest uppercase">
-      <div className="w-[570px] h-fit box-border border-solid border-4 border-inherit  border-opacity-5 px-[15px] m-auto ">
+    <div className=" w-screen md:w-[1200px] mx-auto text-xs grid gap-2 md:grid-cols-2 grid-cols-1 h-fit py-[70px] tracking-widest uppercase">
+      <div className="w-screen md:w-[570px] h-fit box-border border-solid border-4 border-inherit  border-opacity-5 px-[15px] m-auto ">
         <form className="flex flex-col p-[50px] items-center box-border  bg-web-100 ">
           <p className=" mb-[50px] text-3xl">Login</p>
           <label className="mb-[10px]">Username or Number *</label>
           <input
-            className="w-[460px] h-[42px] border-solid border-2 rounded-3xl	px-[20px] mb-[25px]"
+            className="w-[200px] md:w-[460px] h-[42px] border-solid border-2 rounded-3xl	px-[20px] mb-[25px]"
             type="text"
             value={email}
             onChange={(e) => setUseName(e.target.value)}
@@ -59,7 +59,7 @@ const Login: React.FC = () => {
           <label className="mb-[10px]">Your Password *</label>
           <div className="relative">
             <input
-              className="w-[460px] h-[42px] border-solid border-2 rounded-3xl	px-[20px] mb-[25px] "
+              className="w-[200px] md:w-[460px] h-[42px] border-solid border-2 rounded-3xl	px-[20px] mb-[25px] "
               type={isIconShowPW === true ? "text" : "password"}
               value={password}
               onChange={(e) => setPassWord(e.target.value)}

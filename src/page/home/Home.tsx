@@ -35,9 +35,9 @@ export function Home() {
           <TrendingProduct />
 
           <div className=" w-[1200px] flex md:flex-row flex-col items-center justify-between -tracking-tighter mt-[40px] mb-[10px]">
-            <div className="mb-[10px] box-border w-[570px] h-[220px] bg-[url('https://nouthemes.net/html/zorka/assets/images/home-bg-1.jpg')] bg-center bg-cover">
+            <div className="mb-[10px] box-border w-screen md:w-[570px] md:h-[220px] bg-[url('https://nouthemes.net/html/zorka/assets/images/home-bg-1.jpg')] bg-center bg-cover">
               <a className=" " href="/">
-                <h3 className="border-none w-full h-full flex justify-center items-center font-bold text-[30px] text-[white]">
+                <h3 className=" border-none w-full h-full flex justify-center items-center font-bold text-[16px] md:text-[30px] text-[white]">
                   Zorka
                   <br />
                   Fashion
@@ -46,12 +46,12 @@ export function Home() {
                 </h3>
               </a>
             </div>
-            <div className=" flex justify-center items-center box-border w-[570px] h-[220px] bg-[url('https://nouthemes.net/html/zorka/assets/images/home-bg-2.jpg')] bg-center bg-cover ">
+            <div className=" flex justify-center items-center box-border pt-[10px] pb-[20px] w-screen md:w-[570px] md:h-[220px] bg-[url('https://nouthemes.net/html/zorka/assets/images/home-bg-2.jpg')] bg-center bg-cover ">
               <a href="/">
                 <div className="w-ful h-ful flex items-center border-4 border-[white]">
                   <div className="h-fit box-border border-r-4 border-[white]">
                     <FontAwesomeIcon
-                      className="text-[41px] text-[white] p-3"
+                      className="text-[16px] md:text-[41px] text-[white] p-3"
                       icon={faAnchor}
                     />
                   </div>
@@ -73,7 +73,7 @@ export function Home() {
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center w-full md:justify-around">
               {blockItem.map((items) => (
-                <div className="w-[550px] box-border md:w-[370px] bg-[#fafafa] p-[30px] pb-0 mb-10">
+                <div className="  w-screen box-border md:w-[370px] bg-[#fafafa] p-[30px] pb-0 mb-10">
                   <h3 className="mt-[10px] mb-[30px]">{items.name}</h3>
                   <div className="flex w-[310px]">
                     <div className="relative">
@@ -136,7 +136,7 @@ export function Home() {
             <h5 className="mb-[60px] text-[13px] normal-case ">Our stories</h5>
             <div className="flex flex-col md:flex-row">
               {listBlog.map((item) => (
-                <div className="w-[550px] md:w-[400px] h-[150px] px-[15px] flex -tracking-tighter mb-10">
+                <div className="w-screen md:w-[400px] h-[150px] px-[15px] flex -tracking-tighter mb-10">
                   <img
                     className="w-[170px] h-[150px] pr-[20px]"
                     src={item.thumbnail}
@@ -195,7 +195,7 @@ export function Home() {
         </div>
         <div className=" mediaOpen w-1200px flex flex-col md:flex-row justify-center items-center py-[50px] border-t border-[#b5b5b5]">
           {listBanner.map((item) => (
-            <div className="w-[550px] md:w-[370px] px-[40px] py-[30px] mx-[15px] mb-[5px] bg-[white] border border-[#cc797f] ct-hoverDefault group">
+            <div className="w-screen md:w-[370px] px-[40px] py-[30px] mx-[15px] mb-[5px] bg-[white] border border-[#cc797f] ct-hoverDefault group">
               <div className="media flex ">
                 <div className="media-left flex justify-center items-center ">
                   <FontAwesomeIcon

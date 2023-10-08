@@ -26,7 +26,7 @@ export const LoginHeader = () => {
   };
 
   return (
-    <div className=" relative bg-[#fafafa] uppercase text-[14px] font-semibold tracking-wide w-full pl-[190px] py-[13px]">
+    <div className=" relative bg-[#fafafa] uppercase text-[14px] font-semibold tracking-wide w-[1200px] pl-[10px] py-[13px]">
       {!token ? (
         <div className=" text-[#948c83]">
           <span>Welcome Guest!</span>
