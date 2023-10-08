@@ -1,6 +1,6 @@
 import { faClose, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { ProductItem, deleteProduct } from "../../redux/actions/actions";
 import { useDispatch } from "react-redux";

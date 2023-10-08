@@ -81,7 +81,7 @@ export const Page: React.FC = () => {
             <h4 className=" pb-[5px] border-b mb-[20px] ">GET CONNECTED</h4>
             <ul className="block">
               {listSocial.map((item) => (
-                <li className=" w-[40px] h-[40px] inline-block p-[8px] item-center mr-[5px] border rounded-full text-[#8d8d8d] ct-hoverDefault">
+                <li key={item.link} className=" w-[40px] h-[40px] inline-block p-[8px] item-center mr-[5px] border rounded-full text-[#8d8d8d] ct-hoverDefault">
                   <a
                     className="flex justify-center items-center"
                     href={item.link}
@@ -144,7 +144,7 @@ export const Page: React.FC = () => {
             <h4 className="pb-[5px] border-b mb-[20px]">POPULAR TAGS</h4>
             <ul className=" max-w-[270px] block uppercase text-[#8d8d8d]">
               {listTag.map((item) => (
-                <li className=" w-fit inline-block px-[12px] py-[7px] border  text-[10px] mr-3 mt-3 ct-hoverDefault">
+                <li key={item.title} className=" w-fit inline-block px-[12px] py-[7px] border  text-[10px] mr-3 mt-3 ct-hoverDefault">
                   <a className="font-semibold" href="blog.html">
                     {item.title}
                   </a>

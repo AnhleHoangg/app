@@ -6,6 +6,7 @@ import { Shop } from "../page/shop/Shop";
 import { Page } from "../page/page/Page";
 import { ShoppingCart } from "../page/shopping-cart/ShoppingCart";
 import { SingerProduct } from "../page/singer-product/SingerProduct";
+import { NotFound } from "../page/404/NotFound";
 
 // Public routes
 const publicRoutes = [
@@ -16,6 +17,7 @@ const publicRoutes = [
   { path: config.Routes.page, component: Page },
   { path: config.Routes.shoppingcart, component: ShoppingCart },
   { path: config.Routes.singerproduct, component: SingerProduct },
+  { path: config.Routes.notfound, component: NotFound },
 ];
 
 export { publicRoutes };

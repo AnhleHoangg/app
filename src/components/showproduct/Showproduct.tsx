@@ -10,14 +10,14 @@ export const Showproduct: React.FC = () => {
       <Swiper className="w-[570px] h-[760px] mb-[20px]" loop={true}>
         {listProductSinger.map((item) => (
           <SwiperSlide>
-            <img src={item.thumbnail} alt="LeHoangAnh" />
+            <img key={item.thumbnail} src={item.thumbnail} alt="LeHoangAnh" />
           </SwiperSlide>
         ))}
       </Swiper>
       <Swiper loop={true} spaceBetween={30} slidesPerView={6}>
         {listProductSingerSmall.map((item) => (
           <SwiperSlide>
-            <img src={item.thumbnail} alt="LeHoangAnh" />
+            <img key={item.thumbnail} src={item.thumbnail} alt="LeHoangAnh" />
           </SwiperSlide>
         ))}
         <div className="mt-[15px]">

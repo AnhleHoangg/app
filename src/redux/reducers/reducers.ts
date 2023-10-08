@@ -20,13 +20,13 @@ const totalCart = () => {
    return sum;
 }
 const totalShoppingCart = totalCart();
-const listCart:listCart = {
+const listCartItem:listCart = {
     cartAr:  JSON.parse(localStorage.getItem("listItem")!) || [],
     number: totalShoppingCart || 0
 }
 
 
-export const cartProduct = (state = listCart, action: Action) => {
+export const cartProduct = (state = listCartItem, action: Action) => {
     switch (action.type) {
         case actionType.BUY_PRODUCT:
             const productInCart = state.cartAr.find(
@@ -61,7 +61,7 @@ export const cartProduct = (state = listCart, action: Action) => {
             const oldList = localStorage.getItem("listItem");
             if(oldList){
             let parsedData = JSON.parse(oldList);
-            const objIndex = parsedData.findIndex((obj:ProductItem) =>  obj.items?.id == action.payload.items?.id);
+            const objIndex = parsedData.findIndex((obj:ProductItem) =>  obj.items?.id === action.payload.items?.id);
              parsedData.splice(objIndex, 1);
              if(action.payload.items?.quanlity !== undefined){
                  const oldNumber = state.number - action.payload.items?.quanlity;

@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faRotate } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import config from "../../config";
 import { useDispatch } from "react-redux";
 import { buyProduct } from "../../redux/actions/actions";
-import { useSelector } from "react-redux";
 
 interface productItem {
   items?: {

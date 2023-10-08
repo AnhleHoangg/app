@@ -97,7 +97,10 @@ export const SingerProduct = () => {
                 <h4 className="mr-[20px]">SHARE THIS:</h4>
                 <ul>
                   {listSocial.map((item) => (
-                    <li className=" w-[40px] h-[40px] inline-block p-[8px] item-center mr-[5px] border rounded-full text-[#8d8d8d] ct-hoverDefault">
+                    <li
+                      key={item.link}
+                      className=" w-[40px] h-[40px] inline-block p-[8px] item-center mr-[5px] border rounded-full text-[#8d8d8d] ct-hoverDefault"
+                    >
                       <a
                         className="flex justify-center items-center"
                         href={item.link}
