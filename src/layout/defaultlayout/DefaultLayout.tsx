@@ -8,7 +8,7 @@ import { IconHeader } from "../../components/iconheader/IconHeader";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-type layoutProps = {
+export type layoutProps = {
   children?: React.ReactNode;
 };
 

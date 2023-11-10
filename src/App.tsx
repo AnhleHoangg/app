@@ -1,20 +1,22 @@
 import { Route, Routes } from "react-router-dom";
 
-import DefaultLayout from "./layout/defaultlayout/DefaultLayout";
 import { publicRoutes } from "./routes";
+import DefaultLayout from "./layout/defaultlayout/DefaultLayout";
 
 function App() {
   return (
-    <div className="flex justify-center ">
+    <div className="top-0 left-0 flex justify-center">
       <DefaultLayout>
         <Routes>
-          {publicRoutes.map((route) => (
-            <Route
-              path={route.path}
-              key={route.path}
-              Component={route.component}
-            />
-          ))}
+          {publicRoutes.map((route) => {
+            return (
+              <Route
+                key={route.path}
+                path={route.path}
+                element={<route.component />}
+              />
+            );
+          })}
         </Routes>
       </DefaultLayout>
     </div>

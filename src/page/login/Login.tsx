@@ -92,7 +92,10 @@ const Login: React.FC = () => {
             Login
           </button>
           <label className="mt-[20px] mb-[10px] flex justify-center items-center">
-            <input className=" m-auto cursor-pointer h-full" type="checkbox" />
+            <input
+              className="accent-[#cc797f] m-auto cursor-pointer h-full"
+              type="checkbox"
+            />
             <div className="ml-2"></div>
             Remember Me?
           </label>
@@ -113,7 +116,7 @@ const Login: React.FC = () => {
           <div className=" my-3">
             <label className=" flex justify-center items-center">
               <input
-                className=" m-auto cursor-pointer h-full"
+                className="accent-[#cc797f] m-auto cursor-pointer h-full"
                 type="checkbox"
               />
               <div className="ml-2"></div>I accpet the terms and conditions.
@@ -123,7 +126,7 @@ const Login: React.FC = () => {
           <div className=" my-3">
             <label className=" flex justify-center items-center">
               <input
-                className=" m-auto cursor-pointer h-full"
+                className="accent-[#cc797f] m-auto cursor-pointer h-full"
                 type="checkbox"
               />
               <div className="ml-2"></div>I want zorka to send me news and
