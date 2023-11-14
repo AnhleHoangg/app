@@ -16,17 +16,16 @@ import { Button } from "../../components/button/ButtonSale";
 import { SlideShowLogo } from "../../components/slideshow/slideShowLogo";
 import { listBlog } from "../../data/mock-listblog";
 import { listBanner } from "../../data/mock-listbanner";
+import { SlideShowImageHome } from "../../components/slideshow/slideShowImageHome";
 
 export function Home() {
   return (
     <>
       <div className="wrapper">
-        <img
-          className="w-full mt-[10px]"
-          src="https://nouthemes.net/html/zorka/assets/images/slideshow1.jpg"
-          alt="Lehoanganh"
-        ></img>
-        <div className="">
+        <div>
+          <SlideShowImageHome />
+        </div>
+        <div>
           <Button></Button>
         </div>
         <div className="flex flex-col justify-center mt-[60px] items-center uppercase tracking-widest ">
@@ -73,7 +72,10 @@ export function Home() {
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center w-full md:justify-around">
               {blockItem.map((items) => (
-                <div key={items.id} className="  w-screen box-border md:w-[370px] bg-[#fafafa] p-[30px] pb-0 mb-10">
+                <div
+                  key={items.id}
+                  className="  w-screen box-border md:w-[370px] bg-[#fafafa] p-[30px] pb-0 mb-10"
+                >
                   <h3 className="mt-[10px] mb-[30px]">{items.name}</h3>
                   <div className="flex w-[310px]">
                     <div className="relative">
@@ -201,7 +203,10 @@ export function Home() {
         </div>
         <div className=" mediaOpen w-1200px flex flex-col md:flex-row justify-center items-center py-[50px] border-t border-[#b5b5b5]">
           {listBanner.map((item) => (
-            <div key={item.title} className="w-screen md:w-[370px] px-[40px] py-[30px] mx-[15px] mb-[5px] bg-[white] border border-[#cc797f] ct-hoverDefault group">
+            <div
+              key={item.title}
+              className="w-screen md:w-[370px] px-[40px] py-[30px] mx-[15px] mb-[5px] bg-[white] border border-[#cc797f] ct-hoverDefault group"
+            >
               <div className="media flex ">
                 <div className="media-left flex justify-center items-center ">
                   <FontAwesomeIcon

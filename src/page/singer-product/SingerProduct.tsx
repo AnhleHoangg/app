@@ -81,14 +81,14 @@ export const SingerProduct = () => {
                   SKU: 123456789
                   <Link to="/"></Link>
                 </li>
-                <li className="pb-[10px] mb-[10px]  border-b">
-                  Categories:
+                <li className="pb-10px] mb-[10px] flex border-b">
+                  <p className="mr-1">Categories:</p>
                   <Link to="/">Jackets & Coats</Link>,
                   <Link to="/">Men’s Clothing</Link>,
                   <Link to="/">Pants & Chinos</Link>.
                 </li>
-                <li className="pb-[10px] mb-[10px]  border-b">
-                  Tags:
+                <li className="pb-[10px] mb-[10px] flex border-b">
+                  <p className="mr-1">Tags:</p>
                   <Link to="/">Shop</Link>,<Link to="/"> Theme</Link>,
                   <Link to="/">WooCommerce</Link>.
                 </li>
