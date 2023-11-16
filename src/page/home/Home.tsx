@@ -33,10 +33,10 @@ export function Home() {
           <h5 className="mb-[30px] text-[13px] normal-case ">Trending</h5>
           <TrendingProduct />
 
-          <div className=" w-[1200px] flex md:flex-row flex-col items-center justify-between -tracking-tighter mt-[40px] mb-[10px]">
-            <div className="mb-[10px] box-border w-screen md:w-[570px] md:h-[220px] bg-[url('https://nouthemes.net/html/zorka/assets/images/home-bg-1.jpg')] bg-center bg-cover">
-              <a className=" " href="/">
-                <h3 className=" border-none w-full h-full flex justify-center items-center font-bold text-[16px] md:text-[30px] text-[white]">
+          <div className=" md:w-screen lg:w-[1200px] flex md:flex-row flex-col items-center justify-between -tracking-tighter mt-[40px] mb-[10px] px-5">
+            <div className="mb-[10px] box-border w-full md:w-[400px] md:h-[110px] lg:w-[570px] lg:h-[220px] bg-[url('https://nouthemes.net/html/zorka/assets/images/home-bg-1.jpg')] bg-center bg-cover">
+              <a href="/">
+                <h3 className="  border-none w-full h-full flex justify-center items-center font-bold text-[20px] lg:text-[30px] text-[white]">
                   Zorka
                   <br />
                   Fashion
@@ -45,7 +45,7 @@ export function Home() {
                 </h3>
               </a>
             </div>
-            <div className=" flex justify-center items-center box-border pt-[10px] pb-[20px] w-screen md:w-[570px] md:h-[220px] bg-[url('https://nouthemes.net/html/zorka/assets/images/home-bg-2.jpg')] bg-center bg-cover ">
+            <div className=" flex justify-center items-center box-border pt-[10px] pb-[20px] w-full md:w-[400px] md:h-[110px] lg:w-[570px] lg:h-[220px] bg-[url('https://nouthemes.net/html/zorka/assets/images/home-bg-2.jpg')] bg-center bg-cover ">
               <a href="/">
                 <div className="w-ful h-ful flex items-center border-4 border-[white]">
                   <div className="h-fit box-border border-r-4 border-[white]">
@@ -70,11 +70,11 @@ export function Home() {
             <div className="">
               <SlideShow chirldren={false} />
             </div>
-            <div className="flex flex-col md:flex-row items-center justify-center w-full md:justify-around">
+            <div className="flex flex-col w-screen px-5 lg:flex-row items-center justify-center  lg:justify-around">
               {blockItem.map((items) => (
                 <div
                   key={items.id}
-                  className="  w-screen box-border md:w-[370px] bg-[#fafafa] p-[30px] pb-0 mb-10"
+                  className="  w-full box-border lg:w-[370px] bg-[#fafafa] p-[30px] pb-0 mb-10"
                 >
                   <h3 className="mt-[10px] mb-[30px]">{items.name}</h3>
                   <div className="flex w-[310px]">
@@ -139,11 +139,11 @@ export function Home() {
           <div className=" blog-updates w-[1200px] flex flex-col items-center pt-[60px]">
             <h3 className=" mb-[0px] border-none">BLOG UPDATES</h3>
             <h5 className="mb-[60px] text-[13px] normal-case ">Our stories</h5>
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col lg:flex-row">
               {listBlog.map((item) => (
                 <div
                   key={item.title}
-                  className="w-screen md:w-[400px] h-[150px] px-[15px] flex -tracking-tighter mb-10"
+                  className="lg:w-[400px] h-[150px] px-[15px] flex justify-center -tracking-tighter mb-10"
                 >
                   <img
                     className="w-[170px] h-[150px] pr-[20px]"
@@ -201,11 +201,11 @@ export function Home() {
         <div className="flex justify-center">
           <SlideShowLogo />
         </div>
-        <div className=" mediaOpen w-1200px flex flex-col md:flex-row justify-center items-center py-[50px] border-t border-[#b5b5b5]">
+        <div className=" mediaOpen w-1200px flex flex-col md:flex-row justify-center items-center py-[50px] border-t border-[#b5b5b5] px-5">
           {listBanner.map((item) => (
             <div
               key={item.title}
-              className="w-screen md:w-[370px] px-[40px] py-[30px] mx-[15px] mb-[5px] bg-[white] border border-[#cc797f] ct-hoverDefault group"
+              className="w-full md:w-[370px] px-[40px] py-[30px] mx-[15px] mb-[5px] bg-[white] border border-[#cc797f] ct-hoverDefault group"
             >
               <div className="media flex ">
                 <div className="media-left flex justify-center items-center ">

@@ -7,5 +7,6 @@ const Routes = {
   shoppingcart: "/shopping-cart",
   singerproduct: "/singer-product",
   notfound: "*",
+  singerpage: "/baiviet",
 };
 export default Routes;

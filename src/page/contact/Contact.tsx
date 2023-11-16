@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <div className="w-full">
+    <div className="w-full bg-[url('https://static.fibre2fashion.com/MemberResources/customwebsiteimages/imagerepo/garment/garment32.jpg')] bg-cover bg-center text-[white]">
       <div className="p-[10px]">
         <iframe
           title="Lehoanganh"
@@ -26,22 +26,22 @@ function Contact() {
                   Your name*
                 </label>
                 <input
-                  className=" w-[570px] h-[42px] px-[25px] mb-[20px] border border-[#a3a3a3] rounded-3xl "
+                  className=" w-[570px] h-[42px] px-[25px] mb-[20px] border border-[#a3a3a3] rounded-3xl text-[#a3a3a3] "
                   type="text"
                 />
                 <label className="text-center text-[11px] mb-[10px] font-medium ">
                   Your email*
                 </label>
                 <input
-                  className="w-[570px] h-[42px] px-[25px] mb-[20px] border border-[#a3a3a3] rounded-3xl"
+                  className="w-[570px] h-[42px] px-[25px] mb-[20px] border border-[#a3a3a3] rounded-3xl text-[#a3a3a3]"
                   type="email"
                 />
                 <label className="text-center text-[11px] mb-[10px] font-medium ">
                   Your message*
                 </label>
-                <textarea className="w-[570px] h-[150px] p-[25px] mb-[20px] border border-[#a3a3a3] rounded-3xl"></textarea>
+                <textarea className="w-[570px] h-[150px] p-[25px] mb-[20px] border border-[#a3a3a3] rounded-3xl text-[#a3a3a3]"></textarea>
                 <button
-                  className="uppercase w-fit border py-[10px] px-[40px] rounded-3xl text-[white] bg-[#cc797f] hover:text-[#cc797f] hover:bg-[white]"
+                  className="uppercase w-fit border py-[10px] px-[40px] rounded-3xl  bg-[#cc797f] hover:text-[#cc797f] hover:bg-[white]"
                   type="submit"
                 >
                   Send

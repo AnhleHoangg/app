@@ -48,7 +48,7 @@ export const ProductItem: React.FC<productItem> = ({ items }) => {
           <button
             className="flex items-center  border-2 p-3  border-[#c2c2c2]  rounded-3xl ct-hoverDefault "
             type="button"
-            onClick={(e) => {
+            onClick={() => {
               handleOnClick();
             }}
           >

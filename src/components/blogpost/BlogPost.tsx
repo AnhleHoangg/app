@@ -5,6 +5,11 @@ import React from "react";
 export const BlogPost: React.FC = () => {
   return (
     <div className="pb-[50px] mb-[40px] border-b">
+      <div className="w-[full] h-[200px] flex justify-center items-center bg-[url('https://www.unlv.edu/sites/default/files/styles/1200_width/public/articles/main-images/Goldfield-Newspaper1_0.jpg?itok=5L5QT6f_')]">
+        <h1 className="text-[white] uppercase text-[40px] tracking-wider font-bold">
+          Blog In Lorka
+        </h1>
+      </div>
       <div className="w-screen md:w-[870px]">
         <h3 className="mb-[25px] border-none text-[36px]">
           <a href="single-post.html">Zorka Men Spring/Summer Vacation</a>
@@ -47,10 +52,11 @@ export const BlogPost: React.FC = () => {
           libero.
         </div>
         <button className="px-[20px] pt-[5px] pb-[7px] border rounded-3xl bg-[#cc797f] text-web-100">
-          <a className="text-[14px] h-fit " href="/">
+          <a className="text-[14px] h-fit " href="/baiviet">
             CONTINUE READING
           </a>
         </button>
+       
       </div>
     </div>
   );

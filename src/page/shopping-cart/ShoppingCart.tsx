@@ -1,6 +1,6 @@
 import { faClose, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ProductItem, deleteProduct } from "../../redux/actions/actions";
 import { useDispatch } from "react-redux";
@@ -9,7 +9,11 @@ import { SlideShow } from "../../components/slideshow/slideShow";
 
 export const ShoppingCart: React.FC = () => {
   const dispatch = useDispatch();
+  const [number, setNumber] = useState<string>("");
+  const [address, setAddress] = useState<string>("");
+  const [name, setName] = useState<string>("");
   const list = useSelector((state: any) => state.cart.cartAr);
+  const [mount, setMount] = useState<boolean>(false);
 
   localStorage.setItem("listItem", JSON.stringify(list));
   const handleClose = (items: ProductItem) => {
@@ -19,18 +23,32 @@ export const ShoppingCart: React.FC = () => {
 
   const listItem = localStorage.getItem("listItem");
   let parsedData;
+  let totalPrice: number = 0;
   if (listItem != null) {
     parsedData = JSON.parse(listItem);
+
+    parsedData.map((items: any) => {
+      return (totalPrice += items.items.price * items.items.quanlity);
+    });
   } else {
-    console.log("Khong co data");
+    console.log("Không có sản phẩm");
   }
 
+  const handleSubmitOder = () => {
+    console.log(totalPrice);
+    console.log(number);
+    console.log(address);
+    console.log(name);
+  };
+
   return (
-    <div className="w-full flex flex-col justify-between items-center pt-[70px]">
-      <div className="w-[1200px] flex flex-col items-center ">
-        <h1 className="mb-[70px] text-[40px] font-semibold tracking-[10px]">
+    <div className="w-full flex flex-col justify-between items-center">
+      <div className="w-full flex justify-center items-center h-[300px] bg-[url('https://wallpapercrafter.com/th8008/1923497-asphalt-the-sun-pose-blonde-costume-shoes-truck.jpg')] bg-cover bg-center">
+        <h1 className="text-[white] mb-[70px] text-[40px] font-semibold tracking-wider">
           SHOPPING CART
         </h1>
+      </div>
+      <div className="w-[1200px] flex flex-col items-center mt-[30px]">
         <div className="flex flex-col ">
           <div className="uppercase flex flex-col items-center">
             <div className="w-[550px] md:w-[1200px]">
@@ -98,8 +116,6 @@ export const ShoppingCart: React.FC = () => {
                   </span>
                 </div>
               ))}
-
-              {/* {Btn coupon } */}
               <div className="flex justify-between items-center pt-[40px] px-[10px] pb-[10px] font-semibold">
                 <div className="">
                   <input
@@ -111,12 +127,60 @@ export const ShoppingCart: React.FC = () => {
                   </button>
                 </div>
                 <div>
-                  <button className="text-[12px] md:text-[16px] px-[25px] pt-[9px] pb-[10px] bg-[#cc797f] rounded-3xl text-[white] uppercase">
+                  <button
+                    onClick={() => {
+                      setMount(!mount);
+                    }}
+                    className="text-[12px] md:text-[16px] px-[25px] pt-[9px] pb-[10px] bg-[#cc797f] rounded-3xl text-[white] uppercase"
+                  >
                     Process To Checkout
                   </button>
                 </div>
               </div>
             </div>
+            {!!mount && (
+              <div className="font-semibold tracking-wide w-[500px] text-center mt-[20px] shadow-xl bg-[#fafafa] rounded-2xl">
+                <h1 className="p-4 text-[#b5676d] text-[20px] font-bold tracking-widest mb-[10px]">
+                  hello check out
+                </h1>
+                <div className="ml-[10px] py-[10px]">
+                  <div className="flex items-center my-[20px]">
+                    <label className="normal-case mr-[5px]">Name:</label>
+                    <input
+                      onChange={(e) => setName(e.target.value)}
+                      className="w-[100%] p-2 px-4 mr-[10px] rounded-3xl"
+                    ></input>
+                  </div>
+                  <div className="flex items-center my-[20px]">
+                    <label className="normal-case mr-[5px]">Address:</label>
+                    <input
+                      onChange={(e) => setAddress(e.target.value)}
+                      className="w-[100%] p-2 px-4 mr-[10px] rounded-3xl"
+                    ></input>
+                  </div>
+                  <div className="flex items-center mr-[10px] ">
+                    <label className="normal-case mr-[5px]">
+                      Number Phone:
+                    </label>
+                    <input
+                      onChange={(e) => setNumber(e.target.value)}
+                      className=" p-2 px-4 w-[100%] rounded-3xl"
+                    ></input>
+                  </div>
+                </div>
+                <div className="my-[20px]">
+                  <span className="text-[#de3757] font-bold">
+                    Total:{totalPrice}
+                  </span>
+                </div>
+                <button
+                  onClick={handleSubmitOder}
+                  className="my-[20px] py-[5px] px-[20px] bg-[#cc797f] rounded-2xl text-[white] font-semibold uppercase"
+                >
+                  Order
+                </button>
+              </div>
+            )}
             <div className="w-[1200px] pt-[25px]">
               <div className="flex flex-col justify-between items-center">
                 <h3 className=" tracking-[7px] font-bold ">RELATED PRODUCTS</h3>

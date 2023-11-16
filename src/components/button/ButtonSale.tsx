@@ -4,7 +4,7 @@ import { buttonHome } from "../../data/mock-buttonsale";
 
 export const Button = () => {
   return (
-    <div className=" flex flex-col md:flex md:flex-row gap-10 w-full md:justify-center items-center cursor-pointer mt-[35px]">
+    <div className=" flex flex-col lg:flex lg:flex-row gap-10 w-full lg:justify-center items-center cursor-pointer mt-[35px]">
       {buttonHome.map((item) => (
         <div
           className={`${item.color} flex items-center w-[300px] h-[60px] `}

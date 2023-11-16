@@ -8,12 +8,12 @@ import { NavLink } from "react-router-dom";
 
 export const SlideShowImageHome: React.FC = () => {
   return (
-    <div>
+    <div className="tracking-wide">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 1000,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         loop={true}
